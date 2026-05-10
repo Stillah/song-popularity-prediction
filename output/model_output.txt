@@ -1,0 +1,271 @@
+2026-05-10 11:01:10,118 INFO spark.SparkContext: Running Spark version 3.2.4
+2026-05-10 11:01:10,238 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2026-05-10 11:01:10,313 INFO resource.ResourceUtils: ==============================================================
+2026-05-10 11:01:10,313 INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+2026-05-10 11:01:10,314 INFO resource.ResourceUtils: ==============================================================
+2026-05-10 11:01:10,314 INFO spark.SparkContext: Submitted application: team23 - spark ML
+2026-05-10 11:01:10,337 INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2026-05-10 11:01:10,350 INFO resource.ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+2026-05-10 11:01:10,352 INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+2026-05-10 11:01:10,404 INFO spark.SecurityManager: Changing view acls to: team23
+2026-05-10 11:01:10,405 INFO spark.SecurityManager: Changing modify acls to: team23
+2026-05-10 11:01:10,405 INFO spark.SecurityManager: Changing view acls groups to: 
+2026-05-10 11:01:10,405 INFO spark.SecurityManager: Changing modify acls groups to: 
+2026-05-10 11:01:10,406 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(team23); groups with view permissions: Set(); users  with modify permissions: Set(team23); groups with modify permissions: Set()
+2026-05-10 11:01:10,639 INFO util.Utils: Successfully started service 'sparkDriver' on port 35271.
+2026-05-10 11:01:10,664 INFO spark.SparkEnv: Registering MapOutputTracker
+2026-05-10 11:01:10,691 INFO spark.SparkEnv: Registering BlockManagerMaster
+2026-05-10 11:01:10,708 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2026-05-10 11:01:10,709 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2026-05-10 11:01:10,740 INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+2026-05-10 11:01:10,767 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-9c34faaa-c324-4503-a4b5-963752deb316
+2026-05-10 11:01:10,798 INFO memory.MemoryStore: MemoryStore started with capacity 912.3 MiB
+2026-05-10 11:01:10,833 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2026-05-10 11:01:10,925 INFO util.log: Logging initialized @2590ms to org.sparkproject.jetty.util.log.Slf4jLog
+2026-05-10 11:01:10,996 INFO server.Server: jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_402-b06
+2026-05-10 11:01:11,017 INFO server.Server: Started @2683ms
+2026-05-10 11:01:11,051 INFO server.AbstractConnector: Started ServerConnector@1bac87d{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2026-05-10 11:01:11,051 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2026-05-10 11:01:11,124 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1d613bfc{/jobs,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,126 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2a6d36fd{/jobs/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,127 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@25ef3ff2{/jobs/job,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,128 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d0c9075{/jobs/job/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,129 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@56245086{/stages,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,129 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@33ddaf66{/stages/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,130 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@77ed477f{/stages/stage,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,131 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@19555c11{/stages/stage/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,132 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@66828c8{/stages/pool,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,132 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@402fc6c2{/stages/pool/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,133 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e62cd83{/storage,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,134 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e99de07{/storage/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,135 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@63e1ee6c{/storage/rdd,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,135 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@63ee28aa{/storage/rdd/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,136 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d977326{/environment,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,136 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@410ea6d8{/environment/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,137 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5d4a1320{/executors,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,141 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1e28369{/executors/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,142 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@558e1c6c{/executors/threadDump,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,143 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3149841{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,151 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7868073d{/static,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,151 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@174fdc88{/,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,152 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@56dcc9f3{/api,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,153 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1bd67380{/jobs/job/kill,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,154 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@43e61079{/stages/stage/kill,null,AVAILABLE,@Spark}
+2026-05-10 11:01:11,155 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://hadoop-01.uni.innopolis.ru:4040
+2026-05-10 11:01:11,497 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at hadoop-03.uni.innopolis.ru/10.100.30.59:8032
+2026-05-10 11:01:11,631 INFO client.AHSProxy: Connecting to Application History server at hadoop-04.uni.innopolis.ru/10.100.30.60:10200
+2026-05-10 11:01:11,714 INFO yarn.Client: Requesting a new application from cluster with 3 NodeManagers
+2026-05-10 11:01:12,130 WARN shortcircuit.DomainSocketFactory: The short-circuit local reads feature cannot be used because libhadoop cannot be loaded.
+2026-05-10 11:01:12,172 INFO conf.Configuration: resource-types.xml not found
+2026-05-10 11:01:12,172 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2026-05-10 11:01:12,183 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (15000 MB per container)
+2026-05-10 11:01:12,184 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+2026-05-10 11:01:12,184 INFO yarn.Client: Setting up container launch context for our AM
+2026-05-10 11:01:12,186 INFO yarn.Client: Setting up the launch environment for our AM container
+2026-05-10 11:01:12,191 INFO yarn.Client: Preparing resources for our AM container
+2026-05-10 11:01:12,228 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+2026-05-10 11:01:15,965 INFO yarn.Client: Uploading resource file:/tmp/spark-74247415-fb17-4684-ae24-7b085b8645e5/__spark_libs__1810277399409603917.zip -> hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/.sparkStaging/application_1777989965680_3866/__spark_libs__1810277399409603917.zip
+2026-05-10 11:01:17,048 INFO yarn.Client: Uploading resource file:/usr/local/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip -> hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/.sparkStaging/application_1777989965680_3866/pyspark.zip
+2026-05-10 11:01:17,087 INFO yarn.Client: Uploading resource file:/usr/local/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip -> hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/.sparkStaging/application_1777989965680_3866/py4j-0.10.9.5-src.zip
+2026-05-10 11:01:17,326 INFO yarn.Client: Uploading resource file:/tmp/spark-74247415-fb17-4684-ae24-7b085b8645e5/__spark_conf__306208143542001963.zip -> hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/.sparkStaging/application_1777989965680_3866/__spark_conf__.zip
+2026-05-10 11:01:17,373 INFO spark.SecurityManager: Changing view acls to: team23
+2026-05-10 11:01:17,373 INFO spark.SecurityManager: Changing modify acls to: team23
+2026-05-10 11:01:17,373 INFO spark.SecurityManager: Changing view acls groups to: 
+2026-05-10 11:01:17,373 INFO spark.SecurityManager: Changing modify acls groups to: 
+2026-05-10 11:01:17,373 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(team23); groups with view permissions: Set(); users  with modify permissions: Set(team23); groups with modify permissions: Set()
+2026-05-10 11:01:17,388 INFO yarn.Client: Submitting application application_1777989965680_3866 to ResourceManager
+2026-05-10 11:01:17,421 INFO impl.YarnClientImpl: Submitted application application_1777989965680_3866
+2026-05-10 11:01:18,425 INFO yarn.Client: Application report for application_1777989965680_3866 (state: ACCEPTED)
+2026-05-10 11:01:18,433 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: teams
+	 start time: 1778400077398
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3866/
+	 user: team23
+2026-05-10 11:01:19,434 INFO yarn.Client: Application report for application_1777989965680_3866 (state: ACCEPTED)
+2026-05-10 11:01:20,436 INFO yarn.Client: Application report for application_1777989965680_3866 (state: ACCEPTED)
+2026-05-10 11:01:21,266 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> hadoop-03.uni.innopolis.ru, PROXY_URI_BASES -> http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3866), /proxy/application_1777989965680_3866
+2026-05-10 11:01:21,438 INFO yarn.Client: Application report for application_1777989965680_3866 (state: RUNNING)
+2026-05-10 11:01:21,438 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.100.30.60
+	 ApplicationMaster RPC port: -1
+	 queue: teams
+	 start time: 1778400077398
+	 final status: UNDEFINED
+	 tracking URL: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3866/
+	 user: team23
+2026-05-10 11:01:21,440 INFO cluster.YarnClientSchedulerBackend: Application application_1777989965680_3866 has started running.
+2026-05-10 11:01:21,449 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33653.
+2026-05-10 11:01:21,449 INFO netty.NettyBlockTransferService: Server created on hadoop-01.uni.innopolis.ru:33653
+2026-05-10 11:01:21,451 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2026-05-10 11:01:21,457 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, hadoop-01.uni.innopolis.ru, 33653, None)
+2026-05-10 11:01:21,461 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-01.uni.innopolis.ru:33653 with 912.3 MiB RAM, BlockManagerId(driver, hadoop-01.uni.innopolis.ru, 33653, None)
+2026-05-10 11:01:21,463 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, hadoop-01.uni.innopolis.ru, 33653, None)
+2026-05-10 11:01:21,464 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, hadoop-01.uni.innopolis.ru, 33653, None)
+2026-05-10 11:01:21,604 INFO ui.ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:21,607 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5629b3de{/metrics/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:21,932 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+2026-05-10 11:01:25,510 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.100.30.60:36166) with ID 1,  ResourceProfileId 0
+2026-05-10 11:01:25,614 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-04.uni.innopolis.ru:39158 with 2004.6 MiB RAM, BlockManagerId(1, hadoop-04.uni.innopolis.ru, 39158, None)
+2026-05-10 11:01:26,986 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.100.30.60:36210) with ID 3,  ResourceProfileId 0
+2026-05-10 11:01:27,092 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-04.uni.innopolis.ru:41047 with 2004.6 MiB RAM, BlockManagerId(3, hadoop-04.uni.innopolis.ru, 41047, None)
+2026-05-10 11:01:29,677 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.100.30.59:47568) with ID 2,  ResourceProfileId 0
+2026-05-10 11:01:29,821 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.100.30.59:47570) with ID 4,  ResourceProfileId 0
+2026-05-10 11:01:29,845 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+/usr/local/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+2026-05-10 11:01:29,883 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-03.uni.innopolis.ru:40739 with 2004.6 MiB RAM, BlockManagerId(2, hadoop-03.uni.innopolis.ru, 40739, None)
+2026-05-10 11:01:30,001 INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2026-05-10 11:01:30,003 INFO internal.SharedState: Warehouse path is 'hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse'.
+2026-05-10 11:01:30,014 INFO ui.ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:30,015 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@25c169f0{/SQL,null,AVAILABLE,@Spark}
+2026-05-10 11:01:30,015 INFO ui.ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:30,016 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3b8d61e6{/SQL/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:30,016 INFO ui.ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:30,017 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2369faac{/SQL/execution,null,AVAILABLE,@Spark}
+2026-05-10 11:01:30,018 INFO ui.ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:30,018 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4d5645c6{/SQL/execution/json,null,AVAILABLE,@Spark}
+2026-05-10 11:01:30,019 INFO ui.ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+2026-05-10 11:01:30,020 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@58a50cb9{/static/sql,null,AVAILABLE,@Spark}
+2026-05-10 11:01:30,023 INFO storage.BlockManagerMasterEndpoint: Registering block manager hadoop-03.uni.innopolis.ru:42791 with 2004.6 MiB RAM, BlockManagerId(4, hadoop-03.uni.innopolis.ru, 42791, None)
+Spark session started.
++--------------------+
+|           namespace|
++--------------------+
+|             default|
+|           ml_stage3|
+|             retake1|
+|             root_db|
+|                show|
+|    team00_projectdb|
+|          team0_dbms|
+|     team0_projectdb|
+|             team0db|
+|            team0db1|
+|            team0db2|
+|    team11_projectdb|
+|           team12_db|
+|team12_hive_proje...|
+|    team12_projectdb|
+|    team13_projectdb|
+|team13_projectdb_...|
+|    team14_projectdb|
+|    team15_projectdb|
+|    team16_projectdb|
++--------------------+
+only showing top 20 rows
+
++----------------+--------------------+-----------+
+|       namespace|           tableName|isTemporary|
++----------------+--------------------+-----------+
+|team23_projectdb|          q0_results|      false|
+|team23_projectdb|          q1_results|      false|
+|team23_projectdb|          q2_results|      false|
+|team23_projectdb|          q3_results|      false|
+|team23_projectdb|          q4_results|      false|
+|team23_projectdb|          q5_results|      false|
+|team23_projectdb|          q6_results|      false|
+|team23_projectdb|   songs_part_bucket|      false|
+|team23_projectdb|stage4_ml_feature...|      false|
+|team23_projectdb|stage4_ml_feature...|      false|
+|team23_projectdb|stage4_ml_hyperpa...|      false|
+|team23_projectdb|stage4_ml_model_c...|      false|
+|team23_projectdb|stage4_ml_predict...|      false|
++----------------+--------------------+-----------+
+
+2026-05-10 11:01:37,461 WARN util.package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+2026-05-10 11:01:37,834 WARN session.SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+Total rows: 87571
+root
+ |-- id: long (nullable = true)
+ |-- af_danceability: double (nullable = true)
+ |-- af_energy: double (nullable = true)
+ |-- key_sin: double (nullable = true)
+ |-- key_cos: double (nullable = true)
+ |-- af_loudness: double (nullable = true)
+ |-- af_mode: integer (nullable = true)
+ |-- af_speechiness: double (nullable = true)
+ |-- af_acousticness: double (nullable = true)
+ |-- af_instrumentalness: double (nullable = true)
+ |-- af_liveness: double (nullable = true)
+ |-- af_valence: double (nullable = true)
+ |-- af_tempo: double (nullable = true)
+ |-- af_time_signature: double (nullable = true)
+ |-- duration_ms: double (nullable = true)
+ |-- explicit: integer (nullable = true)
+ |-- release_day_of_week: integer (nullable = true)
+ |-- release_week_of_year: integer (nullable = true)
+ |-- num_markets: integer (nullable = true)
+ |-- is_market_us: integer (nullable = true)
+ |-- is_market_gb: integer (nullable = true)
+ |-- is_market_de: integer (nullable = true)
+ |-- is_market_jp: integer (nullable = true)
+ |-- is_market_br: integer (nullable = true)
+ |-- is_market_fr: integer (nullable = true)
+ |-- is_market_ca: integer (nullable = true)
+ |-- is_market_au: integer (nullable = true)
+ |-- artist_prior_tracks_count: integer (nullable = true)
+ |-- artist_avg_past_streams: double (nullable = true)
+ |-- streams_in_the_first_month: double (nullable = true)
+ |-- release_month: integer (nullable = true)
+
+Rows after dropna: 87571
+Total rows: 87571, split at: 70056
+2026-05-10 11:01:47,219 WARN window.WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+2026-05-10 11:01:47,296 WARN window.WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+Train rows: 70056 | Test rows: 17515
+Train / test JSON saved.
+
+=== Model 1: Linear Regression ===
+2026-05-10 11:02:03,324 WARN netlib.InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+2026-05-10 11:02:03,330 WARN netlib.InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.ForeignLinkerBLAS
+2026-05-10 11:02:03,490 WARN netlib.InstanceBuilder$NativeLAPACK: Failed to load implementation from:dev.ludovic.netlib.lapack.JNILAPACK
+Best regParam:        0.01
+Best elasticNetParam: 0.0
+model1 saved.
+LR  RMSE (log scale): 2.1916
+LR  R²   (log scale): 0.1273
+LR  MAE  (log scale): 1.7732
+model1 predictions saved.
+
+=== Model 2: GBT Regressor ===
+Best maxDepth: 5
+Best stepSize: 0.1
+
+Top-10 feature importances (GBT):
+  log_artist_avg_past_streams              0.4091
+  artist_prior_tracks_count                0.1014
+  af_loudness                              0.0634
+  af_instrumentalness                      0.0421
+  af_acousticness                          0.0410
+  explicit                                 0.0377
+  duration_ms                              0.0353
+  af_danceability                          0.0331
+  num_markets                              0.0308
+  release_day_of_week_sin                  0.0269
+model2 saved.
+GBT RMSE (log scale): 1.8791
+GBT R²   (log scale): 0.3584
+GBT MAE  (log scale): 1.4749
+model2 predictions saved.
+
+=== Model Comparison ===
++------------------------------------------------------------------------------+------+------+------+
+|model                                                                         |RMSE  |R2    |MAE   |
++------------------------------------------------------------------------------+------+------+------+
+|LinearRegressionModel: uid=LinearRegression_8f388afd2293, numFeatures=32      |2.1916|0.1273|1.7732|
+|GBTRegressionModel: uid=GBTRegressor_c1a0f15c9fc6, numTrees=20, numFeatures=32|1.8791|0.3584|1.4749|
++------------------------------------------------------------------------------+------+------+------+
+
+evaluation.csv saved.
+
+=== Sanity check (original-scale factor) ===
+LR  exp(RMSE) ≈ 8.95×
+GBT exp(RMSE) ≈ 6.55×
+Done.

@@ -1,0 +1,5 @@
+model,hyperparameter,searched_values,best_value,reason
+Linear Regression,regParam,0.001; 0.01; 0.1,0.001,Controls regularization strength
+Linear Regression,elasticNetParam,0.0; 0.5; 1.0,0.0,Controls the Ridge and Lasso regularization mix
+GBT Regressor,maxDepth,3; 5,5,Controls the depth and complexity of each tree
+GBT Regressor,stepSize,0.05; 0.1,0.1,Controls the boosting learning rate

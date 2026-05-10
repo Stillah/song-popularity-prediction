@@ -1,0 +1,12 @@
+rank,feature,importance,model
+1,log_artist_avg_past_streams,0.4091,GBT Regressor
+2,artist_prior_tracks_count,0.1014,GBT Regressor
+3,af_loudness,0.0634,GBT Regressor
+4,af_instrumentalness,0.0421,GBT Regressor
+5,af_acousticness,0.0410,GBT Regressor
+6,explicit,0.0377,GBT Regressor
+7,duration_ms,0.0353,GBT Regressor
+8,af_danceability,0.0331,GBT Regressor
+9,num_markets,0.0308,GBT Regressor
+10,release_day_of_week_sin,0.0269,GBT Regressor
+11,other,0.1792,GBT Regressor

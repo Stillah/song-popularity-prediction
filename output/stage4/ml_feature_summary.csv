@@ -1,0 +1,30 @@
+feature_group,feature_name,description,used_in_model
+Audio features,af_danceability,Danceability score from Spotify audio analysis,yes
+Audio features,af_energy,Energy score from Spotify audio analysis,yes
+Audio features,key_sin,Sine encoding of musical key,yes
+Audio features,key_cos,Cosine encoding of musical key,yes
+Audio features,af_loudness,Track loudness in decibels,yes
+Audio features,af_mode,Musical mode flag,yes
+Audio features,af_speechiness,Speechiness score,yes
+Audio features,af_acousticness,Acousticness score,yes
+Audio features,af_instrumentalness,Instrumentalness score,yes
+Audio features,af_liveness,Liveness score,yes
+Audio features,af_valence,Musical positivity score,yes
+Audio features,af_tempo,Tempo in beats per minute,yes
+Audio features,af_time_signature,Time signature,yes
+Track metadata,duration_ms,Track duration in milliseconds,yes
+Track metadata,explicit,Explicit content flag,yes
+Release timing,release_month,Month of release,yes
+Release timing,release_day_of_week,Day of week of release,yes
+Release timing,release_week_of_year,Week number of release,yes
+Market availability,num_markets,Number of available Spotify markets,yes
+Market availability,is_market_us,Availability in the United States,yes
+Market availability,is_market_gb,Availability in Great Britain,yes
+Market availability,is_market_de,Availability in Germany,yes
+Market availability,is_market_jp,Availability in Japan,yes
+Market availability,is_market_br,Availability in Brazil,yes
+Market availability,is_market_fr,Availability in France,yes
+Market availability,is_market_ca,Availability in Canada,yes
+Market availability,is_market_au,Availability in Australia,yes
+Artist history,artist_prior_tracks_count,Previous tracks by the artist,yes
+Artist history,log_artist_avg_past_streams,Log-transformed artist past streams,yes

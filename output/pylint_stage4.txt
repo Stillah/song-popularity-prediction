@@ -1,0 +1,8 @@
+=== pylint: scripts/prepare_stage4.py ===
+************* Module prepare_stage4
+scripts/prepare_stage4.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+scripts/prepare_stage4.py:93:0: C0103: Constant name "importance" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 9.76/10 (previous run: 9.76/10, +0.00)
+

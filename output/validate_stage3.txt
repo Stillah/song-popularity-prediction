@@ -1,0 +1,9 @@
+Stage 3 validation: PASSED
+
+[OK] data/train.json
+[OK] data/test.json
+[OK] output/model1_predictions.csv
+[OK] output/model2_predictions.csv
+[OK] output/evaluation.csv
+[OK] models/model1
+[OK] models/model2

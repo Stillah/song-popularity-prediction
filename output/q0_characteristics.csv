@@ -1,0 +1,12 @@
+metric,value
+max_streams_in_first_month,6.12689769E8
+avg_streams_in_first_month,2818204.17
+min_streams_in_first_month,1001.0
+explicit_share_pct,37.47
+avg_num_markets,122.04
+row_count,87571
+model_feature_count,29
+target_column_count,1
+technical_column_count,1
+partition_column,release_month
+bucket_column,num_markets
