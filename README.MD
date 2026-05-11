@@ -252,11 +252,11 @@ artist history and distribution factors are more predictive than audio features 
 
 # Results
 
-| Model             | RMSE     | R²       |
-| ----------------- | -------- | -------- |
-| Baseline          | 2.38     | 0.00     |
-| Linear Regression | 2.17     | 0.17     |
-| GBT Regressor     | **1.87** | **0.37** |
+| Model             | RMSE   | MAE    | R²    |
+| ----------------- | ------ | ------ | ----- |
+| Baseline          | 2.38   | 1.92   | 0.00  |
+| Linear Regression | 2.17   | 1.75   | 0.17  |
+| GBT Regressor     | **1.95** | **1.45** | **0.37** |
 
 GBTRegressor achieved the best performance.
 
