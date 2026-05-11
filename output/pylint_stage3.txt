@@ -1,33 +1,11 @@
 === pylint: scripts/model.py ===
-************* Module model
-scripts/model.py:26:0: C0301: Line too long (114/100) (line-too-long)
-scripts/model.py:431:0: C0304: Final newline missing (missing-final-newline)
-scripts/model.py:42:0: R0901: Too many ancestors (9/7) (too-many-ancestors)
-scripts/model.py:54:8: W0212: Access to a protected member _dummy of a client class (protected-access)
-scripts/model.py:63:17: E1101: Instance of 'CyclicalEncoder' has no '_input_kwargs' member (no-member)
-scripts/model.py:60:23: W0613: Unused argument 'inputCol' (unused-argument)
-scripts/model.py:60:38: W0613: Unused argument 'outputCol' (unused-argument)
-scripts/model.py:60:54: W0613: Unused argument 'period' (unused-argument)
-scripts/model.py:66:4: C0103: Method name "getPeriod" doesn't conform to snake_case naming style (invalid-name)
-scripts/model.py:72:8: C0103: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
-scripts/model.py:79:0: R0901: Too many ancestors (9/7) (too-many-ancestors)
-scripts/model.py:93:17: E1101: Instance of 'LogTransformer' has no '_input_kwargs' member (no-member)
-scripts/model.py:91:23: W0613: Unused argument 'inputCol' (unused-argument)
-scripts/model.py:91:38: W0613: Unused argument 'outputCol' (unused-argument)
-scripts/model.py:394:0: C0103: Constant name "n_feat" doesn't conform to UPPER_CASE naming style (invalid-name)
-scripts/model.py:26:0: W0611: Unused asc imported from pyspark.sql.functions (unused-import)
-scripts/model.py:26:0: W0611: Unused min imported from pyspark.sql.functions as spark_min (unused-import)
-scripts/model.py:26:0: W0611: Unused max imported from pyspark.sql.functions as spark_max (unused-import)
 
-------------------------------------------------------------------
-Your code has been rated at 8.26/10 (previous run: 8.26/10, +0.00)
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
 
 === pylint: scripts/validate_stage3.py ===
-************* Module validate_stage3
-scripts/validate_stage3.py:54:46: C0103: Variable name "fh" doesn't conform to snake_case naming style (invalid-name)
-scripts/validate_stage3.py:77:50: C0103: Variable name "fh" doesn't conform to snake_case naming style (invalid-name)
 
-------------------------------------------------------------------
-Your code has been rated at 9.57/10 (previous run: 9.57/10, +0.00)
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 

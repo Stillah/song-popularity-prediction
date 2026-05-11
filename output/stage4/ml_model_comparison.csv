@@ -1,3 +1,3 @@
 model,rmse,mae,r2,exp_mae,interpretation
-Linear Regression,2.2235,1.7972,0.1380,6.03,Interpretable baseline model
-GBT Regressor,1.9122,1.5036,0.3625,4.50,"Best model; lower RMSE, lower MAE, and higher R2 on test data"
+Linear Regression,2.2018,1.7747,0.1948,5.90,Interpretable baseline model
+GBT Regressor,1.8975,1.4790,0.4020,4.39,"Best model; lower RMSE, lower MAE, and higher R2 on test data"

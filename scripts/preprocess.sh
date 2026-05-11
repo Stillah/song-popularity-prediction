@@ -15,6 +15,7 @@ mkdir -p data/clean_data
 
 HDFS_RAW_DIR="/user/team23/raw_data"
 HDFS_CLEAN_DIR="/user/team23/clean_data"
+HDFS_TRASH="/user/team23/.Trash"
 
 echo "Checking if raw data exists in HDFS at $HDFS_RAW_DIR..."
 
@@ -29,6 +30,8 @@ fi
 
 echo "Cleaning HDFS clean data directory at $HDFS_CLEAN_DIR..."
 hdfs dfs -rm -r -f $HDFS_CLEAN_DIR
+hdfs dfs -rm -r -f $HDFS_TRASH
+hdfs dfs -mkdir $HDFS_TRASH
 
 echo "Running preprocess.py with Spark..."
 spark-submit \
