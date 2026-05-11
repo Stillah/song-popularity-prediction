@@ -23,7 +23,7 @@ import math
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession
 from pyspark.sql.window import Window
-from pyspark.sql.functions import row_number, asc, min as spark_min, max as spark_max, monotonically_increasing_id
+from pyspark.sql.functions import row_number, monotonically_increasing_id
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import VectorAssembler, StandardScaler
 from pyspark.ml.regression import LinearRegression, GBTRegressor
@@ -39,6 +39,8 @@ from pyspark import keyword_only
 # Custom Transformers
 # ===========================================================================
 
+
+# pylint: disable=too-many-ancestors
 class CyclicalEncoder(
     Transformer,
     HasInputCol,
@@ -49,28 +51,33 @@ class CyclicalEncoder(
     """
     Encodes a single integer column as two cyclical features.
     """
-
+    # pylint: disable=protected-access
     period = Param(
         Params._dummy(),
         "period",
         "The cycle length (e.g. 12 for months, 7 for weekdays, 53 for weeks).",
     )
+    # pylint: enable=protected-access
 
     @keyword_only
-    def __init__(self, inputCol=None, outputCol=None, period=12):
+    def __init__(self, inputCol=None, outputCol=None, period=12):  # pylint: disable=unused-argument
         super().__init__()
         self._setDefault(period=12)
+        # pylint: disable=no-member
         kwargs = self._input_kwargs
+        # pylint: enable=no-member
         self._set(**kwargs)
 
-    def getPeriod(self):
+    def get_period(self):
+        """Get encoding period."""
         return self.getOrDefault(self.period)
 
     def _transform(self, dataset):
+        """Apply cyclical encoding transformation to the dataset."""
         col_in = self.getInputCol()
         prefix = self.getOutputCol()
-        p = self.getPeriod()
-        angle = 2.0 * math.pi * F.col(col_in) / p
+        period_val = self.get_period()   # renamed from 'p'
+        angle = 2.0 * math.pi * F.col(col_in) / period_val
         dataset = dataset.withColumn(f"{prefix}_sin", F.sin(angle))
         dataset = dataset.withColumn(f"{prefix}_cos", F.cos(angle))
         return dataset
@@ -88,16 +95,20 @@ class LogTransformer(
     """
 
     @keyword_only
-    def __init__(self, inputCol=None, outputCol=None):
+    def __init__(self, inputCol=None, outputCol=None):  # pylint: disable=unused-argument
         super().__init__()
+        # pylint: disable=no-member
         kwargs = self._input_kwargs
+        # pylint: enable=no-member
         self._set(**kwargs)
 
     def _transform(self, dataset):
+        """Apply log1p transformation to the dataset."""
         return dataset.withColumn(
             self.getOutputCol(),
             F.log1p(F.col(self.getInputCol())),
         )
+# pylint: enable=too-many-ancestors
 
 
 # ===========================================================================
@@ -125,10 +136,12 @@ print("Spark session started.")
 
 
 def run(command: str) -> str:
+    """Run command in the terminal."""
     return os.popen(command).read()
 
 
 def hdfs_get(hdfs_path: str, local_path: str) -> None:
+    """Get file content in hdfs."""
     run(f"hdfs dfs -cat {hdfs_path}/*.csv > {local_path}")
 
 
@@ -391,19 +404,20 @@ print("\n=== Model Comparison ===")
 
 lr_uid = lr_best.uid
 gbt_uid = model2.uid
-n_feat = len(FEATURE_COLS)
+N_FEATURES = len(FEATURE_COLS)
 gbt_num_trees = len(model2.trees)
 
 comparison = spark.createDataFrame(
     [
         (
-            f"LinearRegressionModel: uid={lr_uid}, numFeatures={n_feat}",
+            f"LinearRegressionModel: uid={lr_uid}, numFeatures={N_FEATURES}",
             round(rmse1, 4),
             round(r2_1, 4),
             round(mae1, 4),
         ),
         (
-            f"GBTRegressionModel: uid={gbt_uid}, numTrees={gbt_num_trees}, numFeatures={n_feat}",
+            f"GBTRegressionModel: uid={gbt_uid}, numTrees={gbt_num_trees}, \
+            numFeatures={N_FEATURES}",
             round(rmse2, 4),
             round(r2_2, 4),
             round(mae2, 4),

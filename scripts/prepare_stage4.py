@@ -1,3 +1,4 @@
+"""Prepare files for stage 4 dashboards"""
 import csv
 import math
 import os
@@ -90,11 +91,11 @@ FEATURE_IMPORTANCES = [
 ]
 
 
-importance = 0
+IMPORTANCE = 0
 for _, fraction in FEATURE_IMPORTANCES:
-    importance += fraction
+    IMPORTANCE += fraction
 
-FEATURE_IMPORTANCES.append(('other', 1-importance))
+FEATURE_IMPORTANCES.append(('other', 1-IMPORTANCE))
 
 
 def ensure_output_dir() -> None:

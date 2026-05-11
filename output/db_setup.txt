@@ -1,73 +1,73 @@
 Connecting to jdbc:hive2://hadoop-03.uni.innopolis.ru:10001
-2026-05-09 23:16:23,397 INFO jdbc.Utils: Supplied authorities: hadoop-03.uni.innopolis.ru:10001
-2026-05-09 23:16:23,398 INFO jdbc.Utils: Resolved authority: hadoop-03.uni.innopolis.ru:10001
+2026-05-11 18:24:59,146 INFO jdbc.Utils: Supplied authorities: hadoop-03.uni.innopolis.ru:10001
+2026-05-11 18:24:59,147 INFO jdbc.Utils: Resolved authority: hadoop-03.uni.innopolis.ru:10001
 Connected to: Apache Hive (version 3.1.3)
 Driver: Hive JDBC (version 2.3.9)
 Transaction isolation: TRANSACTION_REPEATABLE_READ
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.execution.engine=tez;
-No rows affected (0.051 seconds)
+No rows affected (0.075 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.exec.dynamic.partition=true;
-No rows affected (0.004 seconds)
+No rows affected (0.003 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.exec.dynamic.partition.mode=nonstrict;
-No rows affected (0.004 seconds)
+No rows affected (0.003 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.enforce.bucketing=true;
-No rows affected (0.005 seconds)
+No rows affected (0.004 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET parquet.compression=SNAPPY;
-No rows affected (0.006 seconds)
+No rows affected (0.004 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.resultset.use.unique.column.names=false;
 No rows affected (0.003 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DROP DATABASE IF EXISTS team23_projectdb CASCADE;
-INFO  : Compiling command(queryId=hive_20260509231623_0e767a62-85a0-4960-96a6-3d5856c4a896): DROP DATABASE IF EXISTS team23_projectdb CASCADE
+INFO  : Compiling command(queryId=hive_20260511182459_a903fc19-f075-4a89-a228-ffb4ead2e05b): DROP DATABASE IF EXISTS team23_projectdb CASCADE
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231623_0e767a62-85a0-4960-96a6-3d5856c4a896 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182459_a903fc19-f075-4a89-a228-ffb4ead2e05b : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
   Stage: Stage-0
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231623_0e767a62-85a0-4960-96a6-3d5856c4a896); Time taken: 0.105 seconds
-INFO  : Executing command(queryId=hive_20260509231623_0e767a62-85a0-4960-96a6-3d5856c4a896): DROP DATABASE IF EXISTS team23_projectdb CASCADE
+INFO  : Completed compiling command(queryId=hive_20260511182459_a903fc19-f075-4a89-a228-ffb4ead2e05b); Time taken: 0.227 seconds
+INFO  : Executing command(queryId=hive_20260511182459_a903fc19-f075-4a89-a228-ffb4ead2e05b): DROP DATABASE IF EXISTS team23_projectdb CASCADE
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231623_0e767a62-85a0-4960-96a6-3d5856c4a896); Time taken: 0.099 seconds
+INFO  : Completed executing command(queryId=hive_20260511182459_a903fc19-f075-4a89-a228-ffb4ead2e05b); Time taken: 0.828 seconds
 INFO  : OK
-No rows affected (0.248 seconds)
+No rows affected (1.239 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> CREATE DATABASE team23_projectdb LOCATION 'project/hive/warehouse';
-INFO  : Compiling command(queryId=hive_20260509231624_5fa3ad32-9325-4980-b0d9-d28174021cbb): CREATE DATABASE team23_projectdb LOCATION 'project/hive/warehouse'
+INFO  : Compiling command(queryId=hive_20260511182500_69aaec14-7d83-4aed-aae3-b9b0b31c1391): CREATE DATABASE team23_projectdb LOCATION 'project/hive/warehouse'
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231624_5fa3ad32-9325-4980-b0d9-d28174021cbb : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182500_69aaec14-7d83-4aed-aae3-b9b0b31c1391 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
   Stage: Stage-0
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231624_5fa3ad32-9325-4980-b0d9-d28174021cbb); Time taken: 0.041 seconds
-INFO  : Executing command(queryId=hive_20260509231624_5fa3ad32-9325-4980-b0d9-d28174021cbb): CREATE DATABASE team23_projectdb LOCATION 'project/hive/warehouse'
+INFO  : Completed compiling command(queryId=hive_20260511182500_69aaec14-7d83-4aed-aae3-b9b0b31c1391); Time taken: 0.026 seconds
+INFO  : Executing command(queryId=hive_20260511182500_69aaec14-7d83-4aed-aae3-b9b0b31c1391): CREATE DATABASE team23_projectdb LOCATION 'project/hive/warehouse'
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231624_5fa3ad32-9325-4980-b0d9-d28174021cbb); Time taken: 0.029 seconds
+INFO  : Completed executing command(queryId=hive_20260511182500_69aaec14-7d83-4aed-aae3-b9b0b31c1391); Time taken: 0.015 seconds
 INFO  : OK
-No rows affected (0.116 seconds)
+No rows affected (0.06 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> USE team23_projectdb;
-INFO  : Compiling command(queryId=hive_20260509231624_d636c2de-5ff1-4889-bbe7-e3ac2bde062d): USE team23_projectdb
+INFO  : Compiling command(queryId=hive_20260511182500_87760f3d-d6e6-41ca-a9a9-38635c0734b6): USE team23_projectdb
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231624_d636c2de-5ff1-4889-bbe7-e3ac2bde062d : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182500_87760f3d-d6e6-41ca-a9a9-38635c0734b6 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
   Stage: Stage-0
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231624_d636c2de-5ff1-4889-bbe7-e3ac2bde062d); Time taken: 0.022 seconds
-INFO  : Executing command(queryId=hive_20260509231624_d636c2de-5ff1-4889-bbe7-e3ac2bde062d): USE team23_projectdb
+INFO  : Completed compiling command(queryId=hive_20260511182500_87760f3d-d6e6-41ca-a9a9-38635c0734b6); Time taken: 0.015 seconds
+INFO  : Executing command(queryId=hive_20260511182500_87760f3d-d6e6-41ca-a9a9-38635c0734b6): USE team23_projectdb
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231624_d636c2de-5ff1-4889-bbe7-e3ac2bde062d); Time taken: 0.008 seconds
+INFO  : Completed executing command(queryId=hive_20260511182500_87760f3d-d6e6-41ca-a9a9-38635c0734b6); Time taken: 0.007 seconds
 INFO  : OK
-No rows affected (0.034 seconds)
+No rows affected (0.026 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- Base external table over Stage I Sqoop output.
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- IMPORTANT:
@@ -77,10 +77,10 @@ No rows affected (0.034 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- and not inside project/warehouse/songs
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DROP TABLE IF EXISTS songs_ext;
-INFO  : Compiling command(queryId=hive_20260509231624_8c8b0d64-789e-4a4f-b897-4089aea505a1): DROP TABLE IF EXISTS songs_ext
+INFO  : Compiling command(queryId=hive_20260511182501_96ff465e-e5f1-489a-99cb-45c4d5e65469): DROP TABLE IF EXISTS songs_ext
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231624_8c8b0d64-789e-4a4f-b897-4089aea505a1 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182501_96ff465e-e5f1-489a-99cb-45c4d5e65469 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -90,12 +90,12 @@ STAGE PLANS:
           table: songs_ext
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231624_8c8b0d64-789e-4a4f-b897-4089aea505a1); Time taken: 0.032 seconds
-INFO  : Executing command(queryId=hive_20260509231624_8c8b0d64-789e-4a4f-b897-4089aea505a1): DROP TABLE IF EXISTS songs_ext
+INFO  : Completed compiling command(queryId=hive_20260511182501_96ff465e-e5f1-489a-99cb-45c4d5e65469); Time taken: 0.035 seconds
+INFO  : Executing command(queryId=hive_20260511182501_96ff465e-e5f1-489a-99cb-45c4d5e65469): DROP TABLE IF EXISTS songs_ext
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231624_8c8b0d64-789e-4a4f-b897-4089aea505a1); Time taken: 0.004 seconds
+INFO  : Completed executing command(queryId=hive_20260511182501_96ff465e-e5f1-489a-99cb-45c4d5e65469); Time taken: 0.004 seconds
 INFO  : OK
-No rows affected (0.055 seconds)
+No rows affected (0.056 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> CREATE EXTERNAL TABLE songs_ext (
 . . . . . . . . . . . . . . . . . . . . . . .>     id BIGINT,
@@ -132,7 +132,7 @@ No rows affected (0.055 seconds)
 . . . . . . . . . . . . . . . . . . . . . . .> )
 . . . . . . . . . . . . . . . . . . . . . . .> STORED AS PARQUET
 . . . . . . . . . . . . . . . . . . . . . . .> LOCATION 'project/warehouse';
-INFO  : Compiling command(queryId=hive_20260509231624_83eabc4b-cd64-4927-8946-253f6166b43d): CREATE EXTERNAL TABLE songs_ext (
+INFO  : Compiling command(queryId=hive_20260511182501_3e662213-6325-4568-8de6-37c284fddea1): CREATE EXTERNAL TABLE songs_ext (
 id BIGINT,
 af_danceability DOUBLE,
 af_energy DOUBLE,
@@ -169,7 +169,7 @@ STORED AS PARQUET
 LOCATION 'project/warehouse'
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231624_83eabc4b-cd64-4927-8946-253f6166b43d : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182501_3e662213-6325-4568-8de6-37c284fddea1 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -185,8 +185,8 @@ STAGE PLANS:
           isExternal: true
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231624_83eabc4b-cd64-4927-8946-253f6166b43d); Time taken: 0.04 seconds
-INFO  : Executing command(queryId=hive_20260509231624_83eabc4b-cd64-4927-8946-253f6166b43d): CREATE EXTERNAL TABLE songs_ext (
+INFO  : Completed compiling command(queryId=hive_20260511182501_3e662213-6325-4568-8de6-37c284fddea1); Time taken: 0.03 seconds
+INFO  : Executing command(queryId=hive_20260511182501_3e662213-6325-4568-8de6-37c284fddea1): CREATE EXTERNAL TABLE songs_ext (
 id BIGINT,
 af_danceability DOUBLE,
 af_energy DOUBLE,
@@ -222,35 +222,35 @@ streams_in_the_first_month DOUBLE
 STORED AS PARQUET
 LOCATION 'project/warehouse'
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231624_83eabc4b-cd64-4927-8946-253f6166b43d); Time taken: 0.042 seconds
+INFO  : Completed executing command(queryId=hive_20260511182501_3e662213-6325-4568-8de6-37c284fddea1); Time taken: 0.028 seconds
 INFO  : OK
-No rows affected (0.113 seconds)
+No rows affected (0.087 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- Quick checks on the raw external table
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SELECT COUNT(*) AS songs_ext_count FROM songs_ext;
-INFO  : Compiling command(queryId=hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3): SELECT COUNT(*) AS songs_ext_count FROM songs_ext
+INFO  : Compiling command(queryId=hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101): SELECT COUNT(*) AS songs_ext_count FROM songs_ext
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:songs_ext_count, type:bigint, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101 : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-0 depends on stages: Stage-1 [FETCH]
 
 STAGE PLANS:
   Stage: Stage-1
     Tez
-      DagId: hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3:2860
+      DagId: hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101:8134
       Edges:
         Reducer 2 <- Map 1 (CUSTOM_SIMPLE_EDGE)
-      DagName: hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3:2860
+      DagName: hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101:8134
       Vertices:
         Map 1 
             Map Operator Tree:
                 TableScan
                   alias: songs_ext
-                  Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: COMPLETE
+                  Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: COMPLETE
                   GatherStats: false
                   Select Operator
-                    Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: COMPLETE
+                    Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: COMPLETE
                     Group By Operator
                       aggregations: count()
                       mode: hash
@@ -288,8 +288,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_ext { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_month, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 4053330
-                    transient_lastDdlTime 1778357784
+                    totalSize 4050210
+                    transient_lastDdlTime 1778513101
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -310,8 +310,8 @@ STAGE PLANS:
                       serialization.ddl struct songs_ext { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_month, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      totalSize 4053330
-                      transient_lastDdlTime 1778357784
+                      totalSize 4050210
+                      transient_lastDdlTime 1778513101
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_ext
                   name: team23_projectdb.songs_ext
@@ -329,10 +329,10 @@ STAGE PLANS:
                 File Output Operator
                   compressed: false
                   GlobalTableId: 0
-                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-24_650_570278794755182115-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-24_650_570278794755182115-1235/-ext-10002
+                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-25-01_431_638059935408448341-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-25-01_431_638059935408448341-4344/-ext-10002
                   NumFilesPerFileSink: 1
                   Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: COMPLETE
-                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-24_650_570278794755182115-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-24_650_570278794755182115-1235/-ext-10002/
+                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-25-01_431_638059935408448341-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-25-01_431_638059935408448341-4344/-ext-10002/
                   table:
                       input format: org.apache.hadoop.mapred.SequenceFileInputFormat
                       output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
@@ -356,16 +356,16 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3); Time taken: 0.232 seconds
-INFO  : Executing command(queryId=hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3): SELECT COUNT(*) AS songs_ext_count FROM songs_ext
-INFO  : Query ID = hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3
+INFO  : Completed compiling command(queryId=hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101); Time taken: 0.2 seconds
+INFO  : Executing command(queryId=hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101): SELECT COUNT(*) AS songs_ext_count FROM songs_ext
+INFO  : Query ID = hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
-INFO  : Subscribed to counters: [] for queryId: hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3
+INFO  : Subscribed to counters: [] for queryId: hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101
 INFO  : Tez session hasn't been created yet. Opening session
 INFO  : Dag name: SELECT COUNT(*) AS songs_ext_cou...songs_ext (Stage-1)
-INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_3104)
+INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_8638)
 
 [2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -373,21 +373,21 @@ INFO  : Status: Running (Executing on YARN cluster with App id application_17779
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
 Reducer 2 ...... container     SUCCEEDED      1          1        0        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 4.43 s     
+[2K[31;1mVERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 4.50 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
-INFO  : Completed executing command(queryId=hive_20260509231624_417f7805-ca46-4eb6-a1e7-474c5a6af9b3); Time taken: 8.99 seconds
+INFO  : Completed executing command(queryId=hive_20260511182501_9d2a614d-7918-42fe-969b-8a6b1ee38101); Time taken: 31.592 seconds
 INFO  : OK
 +------------------+
 | songs_ext_count  |
 +------------------+
 | 87571            |
 +------------------+
-1 row selected (9.313 seconds)
+1 row selected (31.886 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DESCRIBE FORMATTED songs_ext;
-INFO  : Compiling command(queryId=hive_20260509231633_ad6bb4b1-900d-4471-a497-c732a49e5a74): DESCRIBE FORMATTED songs_ext
+INFO  : Compiling command(queryId=hive_20260511182533_85918afb-86bb-44ce-b01c-e4ec02e4c4f3): DESCRIBE FORMATTED songs_ext
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231633_ad6bb4b1-900d-4471-a497-c732a49e5a74 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182533_85918afb-86bb-44ce-b01c-e4ec02e4c4f3 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
   Stage-1 depends on stages: Stage-0 [FETCH]
 
@@ -395,7 +395,7 @@ STAGE PLANS:
   Stage: Stage-0
       Describe Table Operator:
         Describe Table
-          result file: file:/tmp/hive/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-33_980_2139943158440949239-1235/-local-10000
+          result file: file:/tmp/hive/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-25-33_333_6319785207269888461-4344/-local-10000
           table: songs_ext
 
   Stage: Stage-1
@@ -405,10 +405,10 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231633_ad6bb4b1-900d-4471-a497-c732a49e5a74); Time taken: 0.044 seconds
-INFO  : Executing command(queryId=hive_20260509231633_ad6bb4b1-900d-4471-a497-c732a49e5a74): DESCRIBE FORMATTED songs_ext
+INFO  : Completed compiling command(queryId=hive_20260511182533_85918afb-86bb-44ce-b01c-e4ec02e4c4f3); Time taken: 0.037 seconds
+INFO  : Executing command(queryId=hive_20260511182533_85918afb-86bb-44ce-b01c-e4ec02e4c4f3): DESCRIBE FORMATTED songs_ext
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231633_ad6bb4b1-900d-4471-a497-c732a49e5a74); Time taken: 0.022 seconds
+INFO  : Completed executing command(queryId=hive_20260511182533_85918afb-86bb-44ce-b01c-e4ec02e4c4f3); Time taken: 0.021 seconds
 INFO  : OK
 +-------------------------------+----------------------------------------------------+-----------------------+
 |           col_name            |                     data_type                      |        comment        |
@@ -450,7 +450,7 @@ INFO  : OK
 | Database:                     | team23_projectdb                                   | NULL                  |
 | OwnerType:                    | USER                                               | NULL                  |
 | Owner:                        | team23                                             | NULL                  |
-| CreateTime:                   | Sat May 09 23:16:24 MSK 2026                       | NULL                  |
+| CreateTime:                   | Mon May 11 18:25:01 MSK 2026                       | NULL                  |
 | LastAccessTime:               | UNKNOWN                                            | NULL                  |
 | Retention:                    | 0                                                  | NULL                  |
 | Location:                     | hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/warehouse | NULL                  |
@@ -459,8 +459,8 @@ INFO  : OK
 |                               | EXTERNAL                                           | TRUE                  |
 |                               | bucketing_version                                  | 2                     |
 |                               | numFiles                                           | 4                     |
-|                               | totalSize                                          | 4053330               |
-|                               | transient_lastDdlTime                              | 1778357784            |
+|                               | totalSize                                          | 4050210               |
+|                               | transient_lastDdlTime                              | 1778513101            |
 |                               | NULL                                               | NULL                  |
 | # Storage Information         | NULL                                               | NULL                  |
 | SerDe Library:                | org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe | NULL                  |
@@ -476,10 +476,10 @@ INFO  : OK
 59 rows selected (0.091 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DROP TABLE IF EXISTS songs_part_bucket;
-INFO  : Compiling command(queryId=hive_20260509231634_1c4ff072-3b99-41e9-b2e2-d22721f77cd9): DROP TABLE IF EXISTS songs_part_bucket
+INFO  : Compiling command(queryId=hive_20260511182533_99fd4d98-dd3c-41af-b076-7cd914784b5f): DROP TABLE IF EXISTS songs_part_bucket
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231634_1c4ff072-3b99-41e9-b2e2-d22721f77cd9 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182533_99fd4d98-dd3c-41af-b076-7cd914784b5f : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -489,12 +489,12 @@ STAGE PLANS:
           table: songs_part_bucket
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231634_1c4ff072-3b99-41e9-b2e2-d22721f77cd9); Time taken: 0.029 seconds
-INFO  : Executing command(queryId=hive_20260509231634_1c4ff072-3b99-41e9-b2e2-d22721f77cd9): DROP TABLE IF EXISTS songs_part_bucket
+INFO  : Completed compiling command(queryId=hive_20260511182533_99fd4d98-dd3c-41af-b076-7cd914784b5f); Time taken: 0.028 seconds
+INFO  : Executing command(queryId=hive_20260511182533_99fd4d98-dd3c-41af-b076-7cd914784b5f): DROP TABLE IF EXISTS songs_part_bucket
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231634_1c4ff072-3b99-41e9-b2e2-d22721f77cd9); Time taken: 0.005 seconds
+INFO  : Completed executing command(queryId=hive_20260511182533_99fd4d98-dd3c-41af-b076-7cd914784b5f); Time taken: 0.004 seconds
 INFO  : OK
-No rows affected (0.053 seconds)
+No rows affected (0.049 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> CREATE EXTERNAL TABLE songs_part_bucket (
 . . . . . . . . . . . . . . . . . . . . . . .>     id BIGINT,
@@ -532,7 +532,7 @@ No rows affected (0.053 seconds)
 . . . . . . . . . . . . . . . . . . . . . . .> CLUSTERED BY (num_markets) INTO 16 BUCKETS
 . . . . . . . . . . . . . . . . . . . . . . .> STORED AS PARQUET
 . . . . . . . . . . . . . . . . . . . . . . .> LOCATION 'project/hive/warehouse/songs_part_bucket';
-INFO  : Compiling command(queryId=hive_20260509231634_4cd42c27-5d4b-4f31-8fad-769b71995037): CREATE EXTERNAL TABLE songs_part_bucket (
+INFO  : Compiling command(queryId=hive_20260511182533_51a50d56-ebd4-4c8f-a396-192068df2d99): CREATE EXTERNAL TABLE songs_part_bucket (
 id BIGINT,
 af_danceability DOUBLE,
 af_energy DOUBLE,
@@ -570,7 +570,7 @@ STORED AS PARQUET
 LOCATION 'project/hive/warehouse/songs_part_bucket'
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231634_4cd42c27-5d4b-4f31-8fad-769b71995037 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182533_51a50d56-ebd4-4c8f-a396-192068df2d99 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -589,8 +589,8 @@ STAGE PLANS:
           isExternal: true
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231634_4cd42c27-5d4b-4f31-8fad-769b71995037); Time taken: 0.04 seconds
-INFO  : Executing command(queryId=hive_20260509231634_4cd42c27-5d4b-4f31-8fad-769b71995037): CREATE EXTERNAL TABLE songs_part_bucket (
+INFO  : Completed compiling command(queryId=hive_20260511182533_51a50d56-ebd4-4c8f-a396-192068df2d99); Time taken: 0.032 seconds
+INFO  : Executing command(queryId=hive_20260511182533_51a50d56-ebd4-4c8f-a396-192068df2d99): CREATE EXTERNAL TABLE songs_part_bucket (
 id BIGINT,
 af_danceability DOUBLE,
 af_energy DOUBLE,
@@ -627,9 +627,9 @@ CLUSTERED BY (num_markets) INTO 16 BUCKETS
 STORED AS PARQUET
 LOCATION 'project/hive/warehouse/songs_part_bucket'
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231634_4cd42c27-5d4b-4f31-8fad-769b71995037); Time taken: 0.033 seconds
+INFO  : Completed executing command(queryId=hive_20260511182533_51a50d56-ebd4-4c8f-a396-192068df2d99); Time taken: 0.031 seconds
 INFO  : OK
-No rows affected (0.108 seconds)
+No rows affected (0.091 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- Dynamic partition insert:
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- partition column must be last in SELECT
@@ -667,7 +667,7 @@ No rows affected (0.108 seconds)
 . . . . . . . . . . . . . . . . . . . . . . .>     streams_in_the_first_month,
 . . . . . . . . . . . . . . . . . . . . . . .>     release_month
 . . . . . . . . . . . . . . . . . . . . . . .> FROM songs_ext;
-INFO  : Compiling command(queryId=hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390): INSERT OVERWRITE TABLE songs_part_bucket PARTITION (release_month)
+INFO  : Compiling command(queryId=hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2): INSERT OVERWRITE TABLE songs_part_bucket PARTITION (release_month)
 SELECT
 id,
 af_danceability,
@@ -703,7 +703,7 @@ release_month
 FROM songs_ext
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:id, type:bigint, comment:null), FieldSchema(name:af_danceability, type:double, comment:null), FieldSchema(name:af_energy, type:double, comment:null), FieldSchema(name:key_sin, type:double, comment:null), FieldSchema(name:key_cos, type:double, comment:null), FieldSchema(name:af_loudness, type:double, comment:null), FieldSchema(name:af_mode, type:int, comment:null), FieldSchema(name:af_speechiness, type:double, comment:null), FieldSchema(name:af_acousticness, type:double, comment:null), FieldSchema(name:af_instrumentalness, type:double, comment:null), FieldSchema(name:af_liveness, type:double, comment:null), FieldSchema(name:af_valence, type:double, comment:null), FieldSchema(name:af_tempo, type:double, comment:null), FieldSchema(name:af_time_signature, type:double, comment:null), FieldSchema(name:duration_ms, type:double, comment:null), FieldSchema(name:explicit, type:int, comment:null), FieldSchema(name:release_day_of_week, type:int, comment:null), FieldSchema(name:release_week_of_year, type:int, comment:null), FieldSchema(name:num_markets, type:int, comment:null), FieldSchema(name:is_market_us, type:int, comment:null), FieldSchema(name:is_market_gb, type:int, comment:null), FieldSchema(name:is_market_de, type:int, comment:null), FieldSchema(name:is_market_jp, type:int, comment:null), FieldSchema(name:is_market_br, type:int, comment:null), FieldSchema(name:is_market_fr, type:int, comment:null), FieldSchema(name:is_market_ca, type:int, comment:null), FieldSchema(name:is_market_au, type:int, comment:null), FieldSchema(name:artist_prior_tracks_count, type:int, comment:null), FieldSchema(name:artist_avg_past_streams, type:double, comment:null), FieldSchema(name:streams_in_the_first_month, type:double, comment:null), FieldSchema(name:release_month, type:int, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2 : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-2 depends on stages: Stage-1 [DEPENDENCY_COLLECTION]
   Stage-0 depends on stages: Stage-2 [MOVE]
@@ -712,27 +712,27 @@ INFO  : EXPLAIN output for queryid hive_20260509231634_8181d795-57e3-410a-8796-c
 STAGE PLANS:
   Stage: Stage-1
     Tez
-      DagId: hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390:2861
+      DagId: hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2:8135
       Edges:
         Reducer 2 <- Map 1 (CUSTOM_SIMPLE_EDGE)
         Reducer 3 <- Reducer 2 (SIMPLE_EDGE)
-      DagName: hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390:2861
+      DagName: hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2:8135
       Vertices:
         Map 1 
             Map Operator Tree:
                 TableScan
                   alias: songs_ext
-                  Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                   GatherStats: false
                   Select Operator
                     expressions: id (type: bigint), af_danceability (type: double), af_energy (type: double), key_sin (type: double), key_cos (type: double), af_loudness (type: double), af_mode (type: int), af_speechiness (type: double), af_acousticness (type: double), af_instrumentalness (type: double), af_liveness (type: double), af_valence (type: double), af_tempo (type: double), af_time_signature (type: double), duration_ms (type: double), explicit (type: int), release_day_of_week (type: int), release_week_of_year (type: int), num_markets (type: int), is_market_us (type: int), is_market_gb (type: int), is_market_de (type: int), is_market_jp (type: int), is_market_br (type: int), is_market_fr (type: int), is_market_ca (type: int), is_market_au (type: int), artist_prior_tracks_count (type: int), artist_avg_past_streams (type: double), streams_in_the_first_month (type: double), release_month (type: int)
                     outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29, _col30
-                    Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                     Reduce Output Operator
                       null sort order: 
                       sort order: 
                       Map-reduce partition columns: _col18 (type: int)
-                      Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                      Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                       tag: -1
                       value expressions: _col0 (type: bigint), _col1 (type: double), _col2 (type: double), _col3 (type: double), _col4 (type: double), _col5 (type: double), _col6 (type: int), _col7 (type: double), _col8 (type: double), _col9 (type: double), _col10 (type: double), _col11 (type: double), _col12 (type: double), _col13 (type: double), _col14 (type: double), _col15 (type: int), _col16 (type: int), _col17 (type: int), _col18 (type: int), _col19 (type: int), _col20 (type: int), _col21 (type: int), _col22 (type: int), _col23 (type: int), _col24 (type: int), _col25 (type: int), _col26 (type: int), _col27 (type: int), _col28 (type: double), _col29 (type: double), _col30 (type: int)
                       auto parallelism: false
@@ -761,8 +761,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_ext { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_month, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 4053330
-                    transient_lastDdlTime 1778357784
+                    totalSize 4050210
+                    transient_lastDdlTime 1778513101
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -783,8 +783,8 @@ STAGE PLANS:
                       serialization.ddl struct songs_ext { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_month, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      totalSize 4053330
-                      transient_lastDdlTime 1778357784
+                      totalSize 4050210
+                      transient_lastDdlTime 1778513101
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_ext
                   name: team23_projectdb.songs_ext
@@ -796,14 +796,14 @@ STAGE PLANS:
               Select Operator
                 expressions: VALUE._col0 (type: bigint), VALUE._col1 (type: double), VALUE._col2 (type: double), VALUE._col3 (type: double), VALUE._col4 (type: double), VALUE._col5 (type: double), VALUE._col6 (type: int), VALUE._col7 (type: double), VALUE._col8 (type: double), VALUE._col9 (type: double), VALUE._col10 (type: double), VALUE._col11 (type: double), VALUE._col12 (type: double), VALUE._col13 (type: double), VALUE._col14 (type: double), VALUE._col15 (type: int), VALUE._col16 (type: int), VALUE._col17 (type: int), VALUE._col18 (type: int), VALUE._col19 (type: int), VALUE._col20 (type: int), VALUE._col21 (type: int), VALUE._col22 (type: int), VALUE._col23 (type: int), VALUE._col24 (type: int), VALUE._col25 (type: int), VALUE._col26 (type: int), VALUE._col27 (type: int), VALUE._col28 (type: double), VALUE._col29 (type: double), VALUE._col30 (type: int)
                 outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29, _col30
-                Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                 File Output Operator
                   compressed: false
                   GlobalTableId: 1
-                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-09_23-16-34_750_6576435954627507604-1235/-ext-10000
+                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-11_18-25-34_024_1628964090247729474-4344/-ext-10000
                   NumFilesPerFileSink: 1
-                  Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
-                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-09_23-16-34_750_6576435954627507604-1235/-ext-10000/
+                  Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
+                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-11_18-25-34_024_1628964090247729474-4344/-ext-10000/
                   table:
                       input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
                       output format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
@@ -825,7 +825,7 @@ STAGE PLANS:
                         serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                         serialization.format 1
                         serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                        transient_lastDdlTime 1778357794
+                        transient_lastDdlTime 1778513133
                       serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                       name: team23_projectdb.songs_part_bucket
                   TotalFiles: 1
@@ -834,19 +834,19 @@ STAGE PLANS:
                 Select Operator
                   expressions: _col0 (type: bigint), _col1 (type: double), _col2 (type: double), _col3 (type: double), _col4 (type: double), _col5 (type: double), _col6 (type: int), _col7 (type: double), _col8 (type: double), _col9 (type: double), _col10 (type: double), _col11 (type: double), _col12 (type: double), _col13 (type: double), _col14 (type: double), _col15 (type: int), _col16 (type: int), _col17 (type: int), _col18 (type: int), _col19 (type: int), _col20 (type: int), _col21 (type: int), _col22 (type: int), _col23 (type: int), _col24 (type: int), _col25 (type: int), _col26 (type: int), _col27 (type: int), _col28 (type: double), _col29 (type: double), _col30 (type: int)
                   outputColumnNames: id, af_danceability, af_energy, key_sin, key_cos, af_loudness, af_mode, af_speechiness, af_acousticness, af_instrumentalness, af_liveness, af_valence, af_tempo, af_time_signature, duration_ms, explicit, release_day_of_week, release_week_of_year, num_markets, is_market_us, is_market_gb, is_market_de, is_market_jp, is_market_br, is_market_fr, is_market_ca, is_market_au, artist_prior_tracks_count, artist_avg_past_streams, streams_in_the_first_month, release_month
-                  Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                   Group By Operator
                     aggregations: compute_stats(id, 'hll'), compute_stats(af_danceability, 'hll'), compute_stats(af_energy, 'hll'), compute_stats(key_sin, 'hll'), compute_stats(key_cos, 'hll'), compute_stats(af_loudness, 'hll'), compute_stats(af_mode, 'hll'), compute_stats(af_speechiness, 'hll'), compute_stats(af_acousticness, 'hll'), compute_stats(af_instrumentalness, 'hll'), compute_stats(af_liveness, 'hll'), compute_stats(af_valence, 'hll'), compute_stats(af_tempo, 'hll'), compute_stats(af_time_signature, 'hll'), compute_stats(duration_ms, 'hll'), compute_stats(explicit, 'hll'), compute_stats(release_day_of_week, 'hll'), compute_stats(release_week_of_year, 'hll'), compute_stats(num_markets, 'hll'), compute_stats(is_market_us, 'hll'), compute_stats(is_market_gb, 'hll'), compute_stats(is_market_de, 'hll'), compute_stats(is_market_jp, 'hll'), compute_stats(is_market_br, 'hll'), compute_stats(is_market_fr, 'hll'), compute_stats(is_market_ca, 'hll'), compute_stats(is_market_au, 'hll'), compute_stats(artist_prior_tracks_count, 'hll'), compute_stats(artist_avg_past_streams, 'hll'), compute_stats(streams_in_the_first_month, 'hll')
                     keys: release_month (type: int)
                     mode: hash
                     outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29, _col30
-                    Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                     Reduce Output Operator
                       key expressions: _col0 (type: int)
                       null sort order: a
                       sort order: +
                       Map-reduce partition columns: _col0 (type: int)
-                      Statistics: Num rows: 108960 Data size: 40533300 Basic stats: COMPLETE Column stats: NONE
+                      Statistics: Num rows: 108876 Data size: 40502100 Basic stats: COMPLETE Column stats: NONE
                       tag: -1
                       value expressions: _col1 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col2 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col3 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col4 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col5 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col6 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col7 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col8 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col9 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col10 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col11 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col12 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col13 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col14 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col15 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col16 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col17 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col18 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col19 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col20 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col21 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col22 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col23 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col24 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col25 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col26 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col27 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col28 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,bitvector:binary>), _col29 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>), _col30 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,bitvector:binary>)
                       auto parallelism: true
@@ -858,18 +858,18 @@ STAGE PLANS:
                 keys: KEY._col0 (type: int)
                 mode: mergepartial
                 outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29, _col30
-                Statistics: Num rows: 54480 Data size: 20266650 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 54438 Data size: 20251050 Basic stats: COMPLETE Column stats: NONE
                 Select Operator
                   expressions: _col1 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col2 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col3 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col4 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col5 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col6 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col7 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col8 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col9 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col10 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col11 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col12 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col13 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col14 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col15 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col16 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col17 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col18 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col19 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col20 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col21 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col22 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col23 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col24 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col25 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col26 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col27 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col28 (type: struct<columntype:string,min:bigint,max:bigint,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col29 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col30 (type: struct<columntype:string,min:double,max:double,countnulls:bigint,numdistinctvalues:bigint,ndvbitvector:binary>), _col0 (type: int)
                   outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7, _col8, _col9, _col10, _col11, _col12, _col13, _col14, _col15, _col16, _col17, _col18, _col19, _col20, _col21, _col22, _col23, _col24, _col25, _col26, _col27, _col28, _col29, _col30
-                  Statistics: Num rows: 54480 Data size: 20266650 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 54438 Data size: 20251050 Basic stats: COMPLETE Column stats: NONE
                   File Output Operator
                     compressed: false
                     GlobalTableId: 0
-                    directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-34_976_7998912483204750711-1235/-mr-10000/.hive-staging_hive_2026-05-09_23-16-34_976_7998912483204750711-1235/-ext-10001
+                    directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-25-34_251_1707770951136902194-4344/-mr-10000/.hive-staging_hive_2026-05-11_18-25-34_251_1707770951136902194-4344/-ext-10001
                     NumFilesPerFileSink: 1
-                    Statistics: Num rows: 54480 Data size: 20266650 Basic stats: COMPLETE Column stats: NONE
-                    Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-34_976_7998912483204750711-1235/-mr-10000/.hive-staging_hive_2026-05-09_23-16-34_976_7998912483204750711-1235/-ext-10001/
+                    Statistics: Num rows: 54438 Data size: 20251050 Basic stats: COMPLETE Column stats: NONE
+                    Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-25-34_251_1707770951136902194-4344/-mr-10000/.hive-staging_hive_2026-05-11_18-25-34_251_1707770951136902194-4344/-ext-10001/
                     table:
                         input format: org.apache.hadoop.mapred.SequenceFileInputFormat
                         output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
@@ -895,7 +895,7 @@ STAGE PLANS:
           partition:
             release_month 
           replace: true
-          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-09_23-16-34_750_6576435954627507604-1235/-ext-10000
+          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-11_18-25-34_024_1628964090247729474-4344/-ext-10000
           table:
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
               output format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
@@ -917,14 +917,14 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
 
   Stage: Stage-3
     Stats Work
       Basic Stats Work:
-          Stats Aggregation Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-09_23-16-34_750_6576435954627507604-1235/-ext-10000/
+          Stats Aggregation Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-11_18-25-34_024_1628964090247729474-4344/-ext-10000/
       Column Stats Desc:
           Columns: id, af_danceability, af_energy, key_sin, key_cos, af_loudness, af_mode, af_speechiness, af_acousticness, af_instrumentalness, af_liveness, af_valence, af_tempo, af_time_signature, duration_ms, explicit, release_day_of_week, release_week_of_year, num_markets, is_market_us, is_market_gb, is_market_de, is_market_jp, is_market_br, is_market_fr, is_market_ca, is_market_au, artist_prior_tracks_count, artist_avg_past_streams, streams_in_the_first_month
           Column Types: bigint, double, double, double, double, double, int, double, double, double, double, double, double, double, double, int, int, int, int, int, int, int, int, int, int, int, int, int, double, double
@@ -932,8 +932,8 @@ STAGE PLANS:
           Is Table Level Stats: false
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390); Time taken: 0.286 seconds
-INFO  : Executing command(queryId=hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390): INSERT OVERWRITE TABLE songs_part_bucket PARTITION (release_month)
+INFO  : Completed compiling command(queryId=hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2); Time taken: 0.276 seconds
+INFO  : Executing command(queryId=hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2): INSERT OVERWRITE TABLE songs_part_bucket PARTITION (release_month)
 SELECT
 id,
 af_danceability,
@@ -967,32 +967,23 @@ artist_avg_past_streams,
 streams_in_the_first_month,
 release_month
 FROM songs_ext
-INFO  : Query ID = hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390
+INFO  : Query ID = hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
-INFO  : Subscribed to counters: [] for queryId: hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390
+INFO  : Subscribed to counters: [] for queryId: hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2
 INFO  : Session is already open
 INFO  : Dag name: INSERT OVERWRITE TABLE songs_par...songs_ext (Stage-1)
-INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_3104)
+INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_8638)
 
 [2K----------------------------------------------------------------------------------------------
-[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
-[22;0m[2K----------------------------------------------------------------------------------------------
-[2KMap 1            container       RUNNING      1          0        1        0       0       0  
-Reducer 2        container        INITED     16          0        0       16       0       0  
-Reducer 3        container        INITED      1          0        0        1       0       0  
-[2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 00/03  [>>--------------------------] 0%    ELAPSED TIME: 1.36 s     
-[22;0m[2K----------------------------------------------------------------------------------------------
-[9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
 Reducer 2        container       RUNNING     16          0        1       15       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=>>-------------------------] 5%    ELAPSED TIME: 1.86 s     
+[2K[31;1mVERTICES: 01/03  [=>>-------------------------] 5%    ELAPSED TIME: 1.39 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1001,7 +992,7 @@ Reducer 3        container        INITED      1          0        0        1    
 Reducer 2        container       RUNNING     16          1        1       14       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [==>>------------------------] 11%   ELAPSED TIME: 2.37 s     
+[2K[31;1mVERTICES: 01/03  [==>>------------------------] 11%   ELAPSED TIME: 1.89 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1010,142 +1001,304 @@ Reducer 3        container        INITED      1          0        0        1    
 Reducer 2        container       RUNNING     16          2        1       13       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [====>>----------------------] 16%   ELAPSED TIME: 2.87 s     
+[2K[31;1mVERTICES: 01/03  [====>>----------------------] 16%   ELAPSED TIME: 2.39 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          3        2       11       0       0  
+Reducer 2 .      container       RUNNING     16          4        1       11       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=====>>---------------------] 22%   ELAPSED TIME: 3.37 s     
+[2K[31;1mVERTICES: 01/03  [=======>>-------------------] 27%   ELAPSED TIME: 2.90 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          3        3       10       0       0  
+Reducer 2 .      container       RUNNING     16          5        3        8       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=====>>---------------------] 22%   ELAPSED TIME: 3.87 s     
+[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 3.40 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          4        4        8       0       0  
+Reducer 2 ..     container       RUNNING     16          7        3        6       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=======>>-------------------] 27%   ELAPSED TIME: 4.38 s     
+[2K[31;1mVERTICES: 01/03  [===========>>---------------] 44%   ELAPSED TIME: 3.90 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          5        6        5       0       0  
+Reducer 2 ..     container       RUNNING     16          7        5        4       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 4.88 s     
+[2K[31;1mVERTICES: 01/03  [===========>>---------------] 44%   ELAPSED TIME: 4.41 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          5        6        5       0       0  
+Reducer 2 ..     container       RUNNING     16          7        5        4       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 5.38 s     
+[2K[31;1mVERTICES: 01/03  [===========>>---------------] 44%   ELAPSED TIME: 4.91 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          5        6        5       0       0  
+Reducer 2 ...    container       RUNNING     16          8        4        4       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 5.88 s     
+[2K[31;1mVERTICES: 01/03  [=============>>-------------] 50%   ELAPSED TIME: 5.41 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .      container       RUNNING     16          5        8        3       0       0  
-Reducer 3        container        INITED      1          0        0        1       0       0  
-[2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 6.39 s     
-[22;0m[2K----------------------------------------------------------------------------------------------
-[9A[2K----------------------------------------------------------------------------------------------
-[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
-[22;0m[2K----------------------------------------------------------------------------------------------
-[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ..     container       RUNNING     16          7        7        2       0       0  
+Reducer 2 ...    container       RUNNING     16          9        4        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [===========>>---------------] 44%   ELAPSED TIME: 6.89 s     
+[2K[31;1mVERTICES: 01/03  [==============>>------------] 55%   ELAPSED TIME: 5.91 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ...    container       RUNNING     16          8        8        0       0       0  
+Reducer 2 ...    container       RUNNING     16         10        3        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=============>>-------------] 50%   ELAPSED TIME: 7.39 s     
+[2K[31;1mVERTICES: 01/03  [===============>>-----------] 61%   ELAPSED TIME: 6.41 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ...    container       RUNNING     16         10        6        0       0       0  
+Reducer 2 ...    container       RUNNING     16         10        3        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [===============>>-----------] 61%   ELAPSED TIME: 7.89 s     
+[2K[31;1mVERTICES: 01/03  [===============>>-----------] 61%   ELAPSED TIME: 6.92 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ....   container       RUNNING     16         12        4        0       0       0  
+Reducer 2 ....   container       RUNNING     16         12        1        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [==================>>--------] 72%   ELAPSED TIME: 8.39 s     
+[2K[31;1mVERTICES: 01/03  [==================>>--------] 72%   ELAPSED TIME: 7.42 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ....   container       RUNNING     16         12        4        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        0        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [==================>>--------] 72%   ELAPSED TIME: 8.90 s     
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 7.92 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .....  container       RUNNING     16         14        2        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        0        3       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=====================>>-----] 83%   ELAPSED TIME: 9.40 s     
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 8.42 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 .....  container       RUNNING     16         14        2        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 01/03  [=====================>>-----] 83%   ELAPSED TIME: 9.90 s     
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 8.93 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ...... container     SUCCEEDED     16         16        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
 Reducer 3        container       RUNNING      1          0        1        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 02/03  [========================>>--] 94%   ELAPSED TIME: 10.90 s    
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 9.43 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 9.93 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 10.93 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 11.93 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 12.94 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 13.94 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 14.94 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 15.94 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 16.94 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 17.95 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 18.95 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 19.95 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 21.45 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 22.95 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 24.45 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 25.96 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 27.46 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 28.96 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 30.46 s    
+[22;0m[2K----------------------------------------------------------------------------------------------
+[9A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2 ....   container       RUNNING     16         13        3        0       0       0  
+Reducer 3        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/03  [====================>>------] 77%   ELAPSED TIME: 32.46 s    
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1154,7 +1307,7 @@ Reducer 3        container       RUNNING      1          0        1        0    
 Reducer 2 ...... container     SUCCEEDED     16         16        0        0       0       0  
 Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 11.91 s    
+[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 34.47 s    
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1163,53 +1316,53 @@ Reducer 3 ...... container     SUCCEEDED      1          1        0        0    
 Reducer 2 ...... container     SUCCEEDED     16         16        0        0       0       0  
 Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 12.56 s    
+[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 35.78 s    
 [22;0m[2K----------------------------------------------------------------------------------------------
 INFO  : Starting task [Stage-2:DEPENDENCY_COLLECTION] in serial mode
 INFO  : Starting task [Stage-0:MOVE] in serial mode
-INFO  : Loading data to table team23_projectdb.songs_part_bucket partition (release_month=null) from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-09_23-16-34_750_6576435954627507604-1235/-ext-10000
+INFO  : Loading data to table team23_projectdb.songs_part_bucket partition (release_month=null) from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket/.hive-staging_hive_2026-05-11_18-25-34_024_1628964090247729474-4344/-ext-10000
 INFO  : 
 
-INFO  : 	 Time taken to load dynamic partitions: 0.585 seconds
+INFO  : 	 Time taken to load dynamic partitions: 0.542 seconds
 INFO  : 	 Time taken for adding to write entity : 0.001 seconds
 INFO  : Starting task [Stage-3:STATS] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231634_8181d795-57e3-410a-8796-c0f9a36dc390); Time taken: 12.69 seconds
+INFO  : Completed executing command(queryId=hive_20260511182534_0b7bd76e-52d3-4ca5-b073-8ed9e41389d2); Time taken: 35.886 seconds
 INFO  : OK
-No rows affected (13.008 seconds)
+No rows affected (36.182 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> MSCK REPAIR TABLE songs_part_bucket;
-INFO  : Compiling command(queryId=hive_20260509231647_df479563-74ac-4398-8f5c-b3e5c94decdd): MSCK REPAIR TABLE songs_part_bucket
+INFO  : Compiling command(queryId=hive_20260511182610_af9827cc-299d-4148-b7ae-78b2df77db49): MSCK REPAIR TABLE songs_part_bucket
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231647_df479563-74ac-4398-8f5c-b3e5c94decdd : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182610_af9827cc-299d-4148-b7ae-78b2df77db49 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
   Stage: Stage-0
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231647_df479563-74ac-4398-8f5c-b3e5c94decdd); Time taken: 0.04 seconds
-INFO  : Executing command(queryId=hive_20260509231647_df479563-74ac-4398-8f5c-b3e5c94decdd): MSCK REPAIR TABLE songs_part_bucket
+INFO  : Completed compiling command(queryId=hive_20260511182610_af9827cc-299d-4148-b7ae-78b2df77db49); Time taken: 0.038 seconds
+INFO  : Executing command(queryId=hive_20260511182610_af9827cc-299d-4148-b7ae-78b2df77db49): MSCK REPAIR TABLE songs_part_bucket
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231647_df479563-74ac-4398-8f5c-b3e5c94decdd); Time taken: 0.053 seconds
+INFO  : Completed executing command(queryId=hive_20260511182610_af9827cc-299d-4148-b7ae-78b2df77db49); Time taken: 0.039 seconds
 INFO  : OK
-No rows affected (0.12 seconds)
+No rows affected (0.098 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SELECT COUNT(*) AS songs_part_bucket_count FROM songs_part_bucket;
-INFO  : Compiling command(queryId=hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f): SELECT COUNT(*) AS songs_part_bucket_count FROM songs_part_bucket
+INFO  : Compiling command(queryId=hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe): SELECT COUNT(*) AS songs_part_bucket_count FROM songs_part_bucket
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:songs_part_bucket_count, type:bigint, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-0 depends on stages: Stage-1 [FETCH]
 
 STAGE PLANS:
   Stage: Stage-1
     Tez
-      DagId: hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f:2862
+      DagId: hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe:8136
       Edges:
         Reducer 2 <- Map 1 (CUSTOM_SIMPLE_EDGE)
-      DagName: hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f:2862
+      DagName: hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe:8136
       Vertices:
         Map 1 
             Map Operator Tree:
@@ -1273,8 +1426,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 418525
-                    transient_lastDdlTime 1778357806
+                    totalSize 418785
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1297,7 +1450,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1328,8 +1481,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 605997
-                    transient_lastDdlTime 1778357806
+                    totalSize 605764
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1352,7 +1505,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1383,8 +1536,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 613918
-                    transient_lastDdlTime 1778357806
+                    totalSize 613745
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1407,7 +1560,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1438,8 +1591,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 423009
-                    transient_lastDdlTime 1778357806
+                    totalSize 422951
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1462,7 +1615,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1493,8 +1646,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 484633
-                    transient_lastDdlTime 1778357806
+                    totalSize 484787
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1517,7 +1670,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1548,8 +1701,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 545686
-                    transient_lastDdlTime 1778357806
+                    totalSize 545941
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1572,7 +1725,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1603,8 +1756,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 521313
-                    transient_lastDdlTime 1778357806
+                    totalSize 521488
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1627,7 +1780,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1658,8 +1811,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 567093
-                    transient_lastDdlTime 1778357806
+                    totalSize 567392
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1682,7 +1835,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1713,8 +1866,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 547845
-                    transient_lastDdlTime 1778357806
+                    totalSize 547501
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1737,7 +1890,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1768,8 +1921,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 480740
-                    transient_lastDdlTime 1778357806
+                    totalSize 481061
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1792,7 +1945,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1823,8 +1976,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 483288
-                    transient_lastDdlTime 1778357806
+                    totalSize 483278
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1847,7 +2000,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1878,8 +2031,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 545425
-                    transient_lastDdlTime 1778357806
+                    totalSize 545917
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -1902,7 +2055,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -1931,10 +2084,10 @@ STAGE PLANS:
                 File Output Operator
                   compressed: false
                   GlobalTableId: 0
-                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-47_917_249412589313644608-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-47_917_249412589313644608-1235/-ext-10002
+                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-10_342_6017678566366064302-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-26-10_342_6017678566366064302-4344/-ext-10002
                   NumFilesPerFileSink: 1
                   Statistics: Num rows: 1 Data size: 8 Basic stats: COMPLETE Column stats: NONE
-                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-47_917_249412589313644608-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-47_917_249412589313644608-1235/-ext-10002/
+                  Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-10_342_6017678566366064302-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-26-10_342_6017678566366064302-4344/-ext-10002/
                   table:
                       input format: org.apache.hadoop.mapred.SequenceFileInputFormat
                       output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
@@ -1958,16 +2111,16 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f); Time taken: 0.244 seconds
-INFO  : Executing command(queryId=hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f): SELECT COUNT(*) AS songs_part_bucket_count FROM songs_part_bucket
-INFO  : Query ID = hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f
+INFO  : Completed compiling command(queryId=hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe); Time taken: 0.222 seconds
+INFO  : Executing command(queryId=hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe): SELECT COUNT(*) AS songs_part_bucket_count FROM songs_part_bucket
+INFO  : Query ID = hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
-INFO  : Subscribed to counters: [] for queryId: hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f
+INFO  : Subscribed to counters: [] for queryId: hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe
 INFO  : Session is already open
 INFO  : Dag name: SELECT COUNT(*) AS songs...songs_part_bucket (Stage-1)
-INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_3104)
+INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_8638)
 
 [2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1975,7 +2128,7 @@ INFO  : Status: Running (Executing on YARN cluster with App id application_17779
 [2KMap 1            container       RUNNING      1          0        1        0       0       0  
 Reducer 2        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 00/02  [>>--------------------------] 0%    ELAPSED TIME: 1.38 s     
+[2K[31;1mVERTICES: 00/02  [>>--------------------------] 0%    ELAPSED TIME: 1.42 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [8A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1983,7 +2136,103 @@ Reducer 2        container        INITED      1          0        0        1    
 [2KMap 1            container       RUNNING      1          0        1        0       0       0  
 Reducer 2        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 00/02  [>>--------------------------] 0%    ELAPSED TIME: 1.89 s     
+[2K[31;1mVERTICES: 00/02  [>>--------------------------] 0%    ELAPSED TIME: 1.92 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 2.42 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 2.93 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 3.43 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 3.93 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 4.43 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 4.93 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 5.43 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 5.94 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 6.44 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 6.94 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 7.44 s     
+[22;0m[2K----------------------------------------------------------------------------------------------
+[8A[2K----------------------------------------------------------------------------------------------
+[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+[22;0m[2K----------------------------------------------------------------------------------------------
+[2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
+[2K----------------------------------------------------------------------------------------------
+[2K[31;1mVERTICES: 01/02  [=============>>-------------] 50%   ELAPSED TIME: 7.94 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [8A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -1991,21 +2240,21 @@ Reducer 2        container        INITED      1          0        0        1    
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
 Reducer 2 ...... container     SUCCEEDED      1          1        0        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 1.93 s     
+[2K[31;1mVERTICES: 02/02  [==========================>>] 100%  ELAPSED TIME: 8.07 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
-INFO  : Completed executing command(queryId=hive_20260509231647_3839f872-8ba1-4652-abda-4aaba9e6095f); Time taken: 2.039 seconds
+INFO  : Completed executing command(queryId=hive_20260511182610_bbd16b28-48ae-4c50-a2cc-f6047ac640fe); Time taken: 8.137 seconds
 INFO  : OK
 +--------------------------+
 | songs_part_bucket_count  |
 +--------------------------+
 | 87571                    |
 +--------------------------+
-1 row selected (2.315 seconds)
+1 row selected (8.386 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SHOW PARTITIONS songs_part_bucket;
-INFO  : Compiling command(queryId=hive_20260509231650_c065635b-9472-4b5c-83ad-219852247baa): SHOW PARTITIONS songs_part_bucket
+INFO  : Compiling command(queryId=hive_20260511182618_e21b9929-a5d1-42c0-8589-40a57fddd602): SHOW PARTITIONS songs_part_bucket
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:partition, type:string, comment:from deserializer)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231650_c065635b-9472-4b5c-83ad-219852247baa : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182618_e21b9929-a5d1-42c0-8589-40a57fddd602 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
   Stage-1 depends on stages: Stage-0 [FETCH]
 
@@ -2013,7 +2262,7 @@ STAGE PLANS:
   Stage: Stage-0
       Show Partitions Operator:
         Show Partitions
-          result file: file:/tmp/hive/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-50_251_8234618973899933128-1235/-local-10000
+          result file: file:/tmp/hive/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-18_747_7154133528219755379-4344/-local-10000
           table: songs_part_bucket
 
   Stage: Stage-1
@@ -2023,10 +2272,10 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231650_c065635b-9472-4b5c-83ad-219852247baa); Time taken: 0.046 seconds
-INFO  : Executing command(queryId=hive_20260509231650_c065635b-9472-4b5c-83ad-219852247baa): SHOW PARTITIONS songs_part_bucket
+INFO  : Completed compiling command(queryId=hive_20260511182618_e21b9929-a5d1-42c0-8589-40a57fddd602); Time taken: 0.039 seconds
+INFO  : Executing command(queryId=hive_20260511182618_e21b9929-a5d1-42c0-8589-40a57fddd602): SHOW PARTITIONS songs_part_bucket
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231650_c065635b-9472-4b5c-83ad-219852247baa); Time taken: 0.022 seconds
+INFO  : Completed executing command(queryId=hive_20260511182618_e21b9929-a5d1-42c0-8589-40a57fddd602); Time taken: 0.019 seconds
 INFO  : OK
 +-------------------+
 |     partition     |
@@ -2044,12 +2293,12 @@ INFO  : OK
 | release_month=8   |
 | release_month=9   |
 +-------------------+
-12 rows selected (0.075 seconds)
+12 rows selected (0.065 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DESCRIBE FORMATTED songs_part_bucket;
-INFO  : Compiling command(queryId=hive_20260509231650_1ef2e24d-925f-4579-a100-b44f3cb923b5): DESCRIBE FORMATTED songs_part_bucket
+INFO  : Compiling command(queryId=hive_20260511182618_cea9bb4f-3bfe-4bb2-9514-6816a4197aa6): DESCRIBE FORMATTED songs_part_bucket
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231650_1ef2e24d-925f-4579-a100-b44f3cb923b5 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182618_cea9bb4f-3bfe-4bb2-9514-6816a4197aa6 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
   Stage-1 depends on stages: Stage-0 [FETCH]
 
@@ -2057,7 +2306,7 @@ STAGE PLANS:
   Stage: Stage-0
       Describe Table Operator:
         Describe Table
-          result file: file:/tmp/hive/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-50_333_9076688392550749442-1235/-local-10000
+          result file: file:/tmp/hive/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-18_822_7387251756589008080-4344/-local-10000
           table: songs_part_bucket
 
   Stage: Stage-1
@@ -2067,10 +2316,10 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231650_1ef2e24d-925f-4579-a100-b44f3cb923b5); Time taken: 0.042 seconds
-INFO  : Executing command(queryId=hive_20260509231650_1ef2e24d-925f-4579-a100-b44f3cb923b5): DESCRIBE FORMATTED songs_part_bucket
+INFO  : Completed compiling command(queryId=hive_20260511182618_cea9bb4f-3bfe-4bb2-9514-6816a4197aa6); Time taken: 0.038 seconds
+INFO  : Executing command(queryId=hive_20260511182618_cea9bb4f-3bfe-4bb2-9514-6816a4197aa6): DESCRIBE FORMATTED songs_part_bucket
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231650_1ef2e24d-925f-4579-a100-b44f3cb923b5); Time taken: 0.058 seconds
+INFO  : Completed executing command(queryId=hive_20260511182618_cea9bb4f-3bfe-4bb2-9514-6816a4197aa6); Time taken: 0.044 seconds
 INFO  : OK
 +-------------------------------+----------------------------------------------------+-----------------------------+
 |           col_name            |                     data_type                      |           comment           |
@@ -2115,7 +2364,7 @@ INFO  : OK
 | Database:                     | team23_projectdb                                   | NULL                        |
 | OwnerType:                    | USER                                               | NULL                        |
 | Owner:                        | team23                                             | NULL                        |
-| CreateTime:                   | Sat May 09 23:16:34 MSK 2026                       | NULL                        |
+| CreateTime:                   | Mon May 11 18:25:33 MSK 2026                       | NULL                        |
 | LastAccessTime:               | UNKNOWN                                            | NULL                        |
 | Retention:                    | 0                                                  | NULL                        |
 | Location:                     | hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/songs_part_bucket | NULL                        |
@@ -2128,8 +2377,8 @@ INFO  : OK
 |                               | numPartitions                                      | 12                          |
 |                               | numRows                                            | 87571                       |
 |                               | rawDataSize                                        | 2627130                     |
-|                               | totalSize                                          | 6237472                     |
-|                               | transient_lastDdlTime                              | 1778357794                  |
+|                               | totalSize                                          | 6238610                     |
+|                               | transient_lastDdlTime                              | 1778513133                  |
 |                               | NULL                                               | NULL                        |
 | # Storage Information         | NULL                                               | NULL                        |
 | SerDe Library:                | org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe | NULL                        |
@@ -2142,14 +2391,14 @@ INFO  : OK
 | Storage Desc Params:          | NULL                                               | NULL                        |
 |                               | serialization.format                               | 1                           |
 +-------------------------------+----------------------------------------------------+-----------------------------+
-66 rows selected (0.134 seconds)
+66 rows selected (0.108 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> -- Stage II checklist says EDA should use optimized tables, not the plain unpartitioned one
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DROP TABLE IF EXISTS songs_ext;
-INFO  : Compiling command(queryId=hive_20260509231650_09d77c44-1acf-40ac-b117-844b2dd7f3e5): DROP TABLE IF EXISTS songs_ext
+INFO  : Compiling command(queryId=hive_20260511182618_8b7c1099-0d68-4100-ae57-e113ccb60505): DROP TABLE IF EXISTS songs_ext
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231650_09d77c44-1acf-40ac-b117-844b2dd7f3e5 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182618_8b7c1099-0d68-4100-ae57-e113ccb60505 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -2159,18 +2408,18 @@ STAGE PLANS:
           table: songs_ext
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231650_09d77c44-1acf-40ac-b117-844b2dd7f3e5); Time taken: 0.038 seconds
-INFO  : Executing command(queryId=hive_20260509231650_09d77c44-1acf-40ac-b117-844b2dd7f3e5): DROP TABLE IF EXISTS songs_ext
+INFO  : Completed compiling command(queryId=hive_20260511182618_8b7c1099-0d68-4100-ae57-e113ccb60505); Time taken: 0.035 seconds
+INFO  : Executing command(queryId=hive_20260511182618_8b7c1099-0d68-4100-ae57-e113ccb60505): DROP TABLE IF EXISTS songs_ext
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231650_09d77c44-1acf-40ac-b117-844b2dd7f3e5); Time taken: 0.053 seconds
+INFO  : Completed executing command(queryId=hive_20260511182618_8b7c1099-0d68-4100-ae57-e113ccb60505); Time taken: 0.043 seconds
 INFO  : OK
-No rows affected (0.109 seconds)
+No rows affected (0.095 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SHOW TABLES;
-INFO  : Compiling command(queryId=hive_20260509231650_b44be753-6143-499d-a29a-c2c6ef49a481): SHOW TABLES
+INFO  : Compiling command(queryId=hive_20260511182619_e7be0f5c-e98e-4ce7-8a03-6a1d61b46729): SHOW TABLES
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:tab_name, type:string, comment:from deserializer)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231650_b44be753-6143-499d-a29a-c2c6ef49a481 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182619_e7be0f5c-e98e-4ce7-8a03-6a1d61b46729 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
   Stage-1 depends on stages: Stage-0 [FETCH]
 
@@ -2179,7 +2428,7 @@ STAGE PLANS:
       Show Table Operator:
         Show Tables
           database name: team23_projectdb
-          result file: file:/tmp/hive/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-50_606_275277667953505332-1235/-local-10000
+          result file: file:/tmp/hive/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-19_048_4672170548266068151-4344/-local-10000
 
   Stage: Stage-1
     Fetch Operator
@@ -2188,41 +2437,41 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231650_b44be753-6143-499d-a29a-c2c6ef49a481); Time taken: 0.015 seconds
-INFO  : Executing command(queryId=hive_20260509231650_b44be753-6143-499d-a29a-c2c6ef49a481): SHOW TABLES
+INFO  : Completed compiling command(queryId=hive_20260511182619_e7be0f5c-e98e-4ce7-8a03-6a1d61b46729); Time taken: 0.014 seconds
+INFO  : Executing command(queryId=hive_20260511182619_e7be0f5c-e98e-4ce7-8a03-6a1d61b46729): SHOW TABLES
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509231650_b44be753-6143-499d-a29a-c2c6ef49a481); Time taken: 0.006 seconds
+INFO  : Completed executing command(queryId=hive_20260511182619_e7be0f5c-e98e-4ce7-8a03-6a1d61b46729); Time taken: 0.005 seconds
 INFO  : OK
 +--------------------+
 |      tab_name      |
 +--------------------+
 | songs_part_bucket  |
 +--------------------+
-1 row selected (0.039 seconds)
+1 row selected (0.025 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SELECT release_month, COUNT(*) AS cnt
 . . . . . . . . . . . . . . . . . . . . . . .> FROM songs_part_bucket
 . . . . . . . . . . . . . . . . . . . . . . .> GROUP BY release_month
 . . . . . . . . . . . . . . . . . . . . . . .> ORDER BY release_month
 . . . . . . . . . . . . . . . . . . . . . . .> LIMIT 100;
-INFO  : Compiling command(queryId=hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7): SELECT release_month, COUNT(*) AS cnt
+INFO  : Compiling command(queryId=hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a): SELECT release_month, COUNT(*) AS cnt
 FROM songs_part_bucket
 GROUP BY release_month
 ORDER BY release_month
 LIMIT 100
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:release_month, type:int, comment:null), FieldSchema(name:cnt, type:bigint, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-0 depends on stages: Stage-1 [FETCH]
 
 STAGE PLANS:
   Stage: Stage-1
     Tez
-      DagId: hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7:2863
+      DagId: hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a:8137
       Edges:
         Reducer 2 <- Map 1 (SIMPLE_EDGE)
         Reducer 3 <- Reducer 2 (SIMPLE_EDGE)
-      DagName: hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7:2863
+      DagName: hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a:8137
       Vertices:
         Map 1 
             Map Operator Tree:
@@ -2293,8 +2542,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 418525
-                    transient_lastDdlTime 1778357806
+                    totalSize 418785
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2317,7 +2566,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2348,8 +2597,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 605997
-                    transient_lastDdlTime 1778357806
+                    totalSize 605764
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2372,7 +2621,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2403,8 +2652,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 613918
-                    transient_lastDdlTime 1778357806
+                    totalSize 613745
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2427,7 +2676,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2458,8 +2707,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 423009
-                    transient_lastDdlTime 1778357806
+                    totalSize 422951
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2482,7 +2731,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2513,8 +2762,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 484633
-                    transient_lastDdlTime 1778357806
+                    totalSize 484787
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2537,7 +2786,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2568,8 +2817,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 545686
-                    transient_lastDdlTime 1778357806
+                    totalSize 545941
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2592,7 +2841,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2623,8 +2872,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 521313
-                    transient_lastDdlTime 1778357806
+                    totalSize 521488
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2647,7 +2896,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2678,8 +2927,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 567093
-                    transient_lastDdlTime 1778357806
+                    totalSize 567392
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2702,7 +2951,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2733,8 +2982,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 547845
-                    transient_lastDdlTime 1778357806
+                    totalSize 547501
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2757,7 +3006,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2788,8 +3037,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 480740
-                    transient_lastDdlTime 1778357806
+                    totalSize 481061
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2812,7 +3061,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2843,8 +3092,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 483288
-                    transient_lastDdlTime 1778357806
+                    totalSize 483278
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2867,7 +3116,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2898,8 +3147,8 @@ STAGE PLANS:
                     serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                     serialization.format 1
                     serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                    totalSize 545425
-                    transient_lastDdlTime 1778357806
+                    totalSize 545917
+                    transient_lastDdlTime 1778513169
                   serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                 
                     input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -2922,7 +3171,7 @@ STAGE PLANS:
                       serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                       serialization.format 1
                       serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                      transient_lastDdlTime 1778357794
+                      transient_lastDdlTime 1778513133
                     serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
                     name: team23_projectdb.songs_part_bucket
                   name: team23_projectdb.songs_part_bucket
@@ -2973,10 +3222,10 @@ STAGE PLANS:
                   File Output Operator
                     compressed: false
                     GlobalTableId: 0
-                    directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-50_674_5228321569200390955-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-50_674_5228321569200390955-1235/-ext-10002
+                    directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-19_095_8837780730077123471-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-26-19_095_8837780730077123471-4344/-ext-10002
                     NumFilesPerFileSink: 1
                     Statistics: Num rows: 100 Data size: 3000 Basic stats: COMPLETE Column stats: NONE
-                    Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/0467e69c-b142-4a53-b0d8-651031cc744a/hive_2026-05-09_23-16-50_674_5228321569200390955-1235/-mr-10001/.hive-staging_hive_2026-05-09_23-16-50_674_5228321569200390955-1235/-ext-10002/
+                    Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/a442aed7-b7d7-43a3-b30e-dade234f3509/hive_2026-05-11_18-26-19_095_8837780730077123471-4344/-mr-10001/.hive-staging_hive_2026-05-11_18-26-19_095_8837780730077123471-4344/-ext-10002/
                     table:
                         input format: org.apache.hadoop.mapred.SequenceFileInputFormat
                         output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
@@ -3000,21 +3249,21 @@ STAGE PLANS:
         ListSink
 
 
-INFO  : Completed compiling command(queryId=hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7); Time taken: 0.235 seconds
-INFO  : Executing command(queryId=hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7): SELECT release_month, COUNT(*) AS cnt
+INFO  : Completed compiling command(queryId=hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a); Time taken: 0.244 seconds
+INFO  : Executing command(queryId=hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a): SELECT release_month, COUNT(*) AS cnt
 FROM songs_part_bucket
 GROUP BY release_month
 ORDER BY release_month
 LIMIT 100
-INFO  : Query ID = hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7
+INFO  : Query ID = hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a
 INFO  : Total jobs = 1
 INFO  : Launching Job 1 out of 1
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
-INFO  : Subscribed to counters: [] for queryId: hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7
+INFO  : Subscribed to counters: [] for queryId: hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a
 INFO  : Session is already open
 INFO  : Dag name: SELECT release_month, COUNT(*) AS cnt
 ...100 (Stage-1)
-INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_3104)
+INFO  : Status: Running (Executing on YARN cluster with App id application_1777989965680_8638)
 
 [2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -3023,25 +3272,16 @@ INFO  : Status: Running (Executing on YARN cluster with App id application_17779
 Reducer 2        container        INITED      1          0        0        1       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 00/03  [>>--------------------------] 0%    ELAPSED TIME: 1.39 s     
-[22;0m[2K----------------------------------------------------------------------------------------------
-[9A[2K----------------------------------------------------------------------------------------------
-[2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
-[22;0m[2K----------------------------------------------------------------------------------------------
-[2KMap 1            container       RUNNING      1          0        1        0       0       0  
-Reducer 2        container        INITED      1          0        0        1       0       0  
-Reducer 3        container        INITED      1          0        0        1       0       0  
-[2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 00/03  [>>--------------------------] 0%    ELAPSED TIME: 1.89 s     
+[2K[31;1mVERTICES: 00/03  [>>--------------------------] 0%    ELAPSED TIME: 1.40 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
 [22;0m[2K----------------------------------------------------------------------------------------------
 [2KMap 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
-Reducer 2 ...... container     SUCCEEDED      1          1        0        0       0       0  
+Reducer 2        container       RUNNING      1          0        1        0       0       0  
 Reducer 3        container        INITED      1          0        0        1       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 02/03  [=================>>---------] 66%   ELAPSED TIME: 2.39 s     
+[2K[31;1mVERTICES: 01/03  [========>>------------------] 33%   ELAPSED TIME: 1.90 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
 [9A[2K----------------------------------------------------------------------------------------------
 [2K[36;1m        VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
@@ -3050,9 +3290,9 @@ Reducer 3        container        INITED      1          0        0        1    
 Reducer 2 ...... container     SUCCEEDED      1          1        0        0       0       0  
 Reducer 3 ...... container     SUCCEEDED      1          1        0        0       0       0  
 [2K----------------------------------------------------------------------------------------------
-[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 2.46 s     
+[2K[31;1mVERTICES: 03/03  [==========================>>] 100%  ELAPSED TIME: 2.04 s     
 [22;0m[2K----------------------------------------------------------------------------------------------
-INFO  : Completed executing command(queryId=hive_20260509231650_be21f02e-6ee3-4fae-a836-f58696660ca7); Time taken: 2.56 seconds
+INFO  : Completed executing command(queryId=hive_20260511182619_6655c010-9d3d-48fc-9006-0db7c183129a); Time taken: 2.131 seconds
 INFO  : OK
 +----------------+-------+
 | release_month  |  cnt  |
@@ -3070,5 +3310,5 @@ INFO  : OK
 | 11             | 9205  |
 | 12             | 5547  |
 +----------------+-------+
-12 rows selected (2.834 seconds)
+12 rows selected (2.409 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> Closing: 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10001

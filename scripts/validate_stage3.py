@@ -16,6 +16,7 @@ EXPECTED_FILES = [
     "models/model2",
 ]
 
+
 def check_files(base_dir: str) -> bool:
     """Verify each expected path exists and is non-empty."""
     all_ok = True
@@ -51,8 +52,8 @@ def validate_evaluation_csv(base_dir: str) -> None:
         print("  evaluation.csv not found – skipping content check.")
         return
 
-    with open(path, "r", encoding="utf-8") as fh:
-        content = fh.read().strip()
+    with open(path, "r", encoding="utf-8") as file_head:
+        content = file_head.read().strip()
 
     print("\n  evaluation.csv content:")
     for line in content.splitlines():
@@ -74,10 +75,10 @@ def main() -> None:
     # Write to output file (called again by stage3.sh via tee)
     out_path = os.path.join(base_dir, "output", "validate_stage3.txt")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    with open(out_path, "w", encoding="utf-8") as fh:
-        fh.write(f"Stage 3 validation: {summary}\n\n")
+    with open(out_path, "w", encoding="utf-8") as file_head:
+        file_head.write(f"Stage 3 validation: {summary}\n\n")
         for rel_path, status in results:
-            fh.write(f"[{status}] {rel_path}\n")
+            file_head.write(f"[{status}] {rel_path}\n")
 
     if not all_ok:
         sys.exit(1)

@@ -23,7 +23,7 @@ if hdfs dfs -test -e $HDFS_RAW_DIR/merged_data.csv; then
 else
     echo "Copying raw data from local to HDFS. This may take a while..."
     hdfs dfs -mkdir -p $HDFS_RAW_DIR
-    hdfs dfs -put data/merged_data.csv $HDFS_RAW_DIR/
+    hdfs dfs -Ddfs.replication=1 -put data/merged_data.csv $HDFS_RAW_DIR/
     echo "Raw data copied to HDFS."
 fi
 

@@ -12,7 +12,7 @@ from pyspark.sql.types import IntegerType
 from pyspark.sql.window import Window
 
 
-def convert_explicit(df):
+def convert_explicit(df):  # pylint: disable=invalid-name
     """Convert explicit column from string/boolean to integer (0/1)."""
     return df.withColumn(
         "explicit",
@@ -23,7 +23,7 @@ def convert_explicit(df):
     )
 
 
-def compute_target(df):
+def compute_target(df):  # pylint: disable=invalid-name
     """Compute streams_in_the_first_month for each track."""
     df_with_days = df.withColumn(
         "days_since_release",
@@ -37,7 +37,7 @@ def compute_target(df):
     )
 
 
-def get_distinct_tracks(df):
+def get_distinct_tracks(df):  # pylint: disable=invalid-name
     """Get one row per track_id (first occurrence by date)."""
     window_spec = Window.partitionBy("track_id").orderBy("date_parsed")
     return df.withColumn("rn", row_number().over(window_spec)) \
@@ -45,7 +45,7 @@ def get_distinct_tracks(df):
         .drop("rn")
 
 
-def extract_seasonal_features(df):
+def extract_seasonal_features(df):  # pylint: disable=invalid-name
     """Extract month, day of week, and week of year from release_date."""
     return df \
         .withColumn(
@@ -62,7 +62,7 @@ def extract_seasonal_features(df):
         )
 
 
-def parse_available_markets(df):
+def parse_available_markets(df):  # pylint: disable=invalid-name
     """Parse available_markets string into num_markets and 8 binary flags."""
     top_markets = ["US", "GB", "DE", "JP", "BR", "FR", "CA", "AU"]
 
@@ -88,7 +88,7 @@ def parse_available_markets(df):
     return df_clean.drop("markets_clean", "markets_array")
 
 
-def cyclical_encode_key(df):
+def cyclical_encode_key(df):  # pylint: disable=invalid-name
     """Apply cyclical encoding (sin/cos) to af_key."""
     return df \
         .withColumn(
@@ -142,41 +142,42 @@ def main():
 
     spark.sparkContext.setLogLevel("WARN")
 
-    logger = spark._jvm.org.apache.log4j.LogManager.getLogger(__name__)
+    logger = spark._jvm.org.apache.log4j.LogManager.getLogger(__name__)  # pylint: disable=protected-access
     logger.info("Starting Spotify data preprocessing")
 
-    logger.info("Reading raw data from /user/team23/raw_data/merged_data.csv...")
-    df = spark.read \
+    logger.info("Reading raw data from\
+                /user/team23/raw_data/merged_data.csv...")
+    df_merged = spark.read \
         .option("header", "true") \
         .option("inferSchema", "true") \
         .option("nullValue", "NULL") \
         .csv("/user/team23/raw_data/merged_data.csv")
 
-    logger.info(f"Raw data loaded: {df.count()} rows, {len(df.columns)} columns")
+    logger.info(f"Raw data loaded: {df_merged.count()} rows, {len(df_merged.columns)} columns")
 
     logger.info("Filtering: keeping only top200 charts...")
-    df = df.filter(col("chart") == "top200")
-    logger.info(f"After filtering: {df.count()} rows")
+    df_merged = df_merged.filter(col("chart") == "top200")
+    logger.info(f"After filtering: {df_merged.count()} rows")
 
     logger.info("Converting explicit column...")
-    df = convert_explicit(df)
+    df_merged = convert_explicit(df_merged)
 
     logger.info("Converting af_mode to integer...")
-    df = df.withColumn("af_mode", col("af_mode").cast(IntegerType()))
+    df_merged = df_merged.withColumn("af_mode", col("af_mode").cast(IntegerType()))
 
     logger.info("Converting date columns...")
-    df = df.withColumn(
+    df_merged = df_merged.withColumn(
         "release_date_parsed", to_date(col("release_date"), "yyyy-MM-dd")
     )
-    df = df.withColumn(
+    df_merged = df_merged.withColumn(
         "date_parsed", to_date(col("date"), "yyyy-MM-dd")
     )
 
     logger.info("Computing target variable...")
-    df_target = compute_target(df)
+    df_target = compute_target(df_merged)
 
     logger.info("Getting distinct tracks...")
-    df_distinct = get_distinct_tracks(df)
+    df_distinct = get_distinct_tracks(df_merged)
     logger.info(f"Distinct tracks: {df_distinct.count()}")
 
     logger.info("Extracting seasonal features...")
@@ -230,4 +231,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

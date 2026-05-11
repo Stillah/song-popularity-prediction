@@ -1,36 +1,36 @@
 Connecting to jdbc:hive2://hadoop-03.uni.innopolis.ru:10001
-2026-05-09 23:20:20,562 INFO jdbc.Utils: Supplied authorities: hadoop-03.uni.innopolis.ru:10001
-2026-05-09 23:20:20,563 INFO jdbc.Utils: Resolved authority: hadoop-03.uni.innopolis.ru:10001
+2026-05-11 18:29:44,340 INFO jdbc.Utils: Supplied authorities: hadoop-03.uni.innopolis.ru:10001
+2026-05-11 18:29:44,341 INFO jdbc.Utils: Resolved authority: hadoop-03.uni.innopolis.ru:10001
 Connected to: Apache Hive (version 3.1.3)
 Driver: Hive JDBC (version 2.3.9)
 Transaction isolation: TRANSACTION_REPEATABLE_READ
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> USE team23_projectdb;
-INFO  : Compiling command(queryId=hive_20260509232020_94c13c81-6528-49e7-8e4d-616aec5252e2): USE team23_projectdb
+INFO  : Compiling command(queryId=hive_20260511182944_e7645943-220b-47fb-bd51-6bb0d0d98043): USE team23_projectdb
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509232020_94c13c81-6528-49e7-8e4d-616aec5252e2 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182944_e7645943-220b-47fb-bd51-6bb0d0d98043 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
   Stage: Stage-0
 
 
-INFO  : Completed compiling command(queryId=hive_20260509232020_94c13c81-6528-49e7-8e4d-616aec5252e2); Time taken: 0.045 seconds
-INFO  : Executing command(queryId=hive_20260509232020_94c13c81-6528-49e7-8e4d-616aec5252e2): USE team23_projectdb
+INFO  : Completed compiling command(queryId=hive_20260511182944_e7645943-220b-47fb-bd51-6bb0d0d98043); Time taken: 0.045 seconds
+INFO  : Executing command(queryId=hive_20260511182944_e7645943-220b-47fb-bd51-6bb0d0d98043): USE team23_projectdb
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509232020_94c13c81-6528-49e7-8e4d-616aec5252e2); Time taken: 0.006 seconds
+INFO  : Completed executing command(queryId=hive_20260511182944_e7645943-220b-47fb-bd51-6bb0d0d98043); Time taken: 0.008 seconds
 INFO  : OK
-No rows affected (0.106 seconds)
+No rows affected (0.109 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.execution.engine=mr;
-No rows affected (0.002 seconds)
+No rows affected (0.004 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> SET hive.resultset.use.unique.column.names=false;
 No rows affected (0.004 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> DROP TABLE IF EXISTS q1_results;
-INFO  : Compiling command(queryId=hive_20260509232021_32c6b93b-3d50-486e-909e-a0f9f9ad0224): DROP TABLE IF EXISTS q1_results
+INFO  : Compiling command(queryId=hive_20260511182944_23484424-1edf-455c-ae92-bf4e7792a77d): DROP TABLE IF EXISTS q1_results
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509232021_32c6b93b-3d50-486e-909e-a0f9f9ad0224 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182944_23484424-1edf-455c-ae92-bf4e7792a77d : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -40,12 +40,12 @@ STAGE PLANS:
           table: q1_results
 
 
-INFO  : Completed compiling command(queryId=hive_20260509232021_32c6b93b-3d50-486e-909e-a0f9f9ad0224); Time taken: 0.036 seconds
-INFO  : Executing command(queryId=hive_20260509232021_32c6b93b-3d50-486e-909e-a0f9f9ad0224): DROP TABLE IF EXISTS q1_results
+INFO  : Completed compiling command(queryId=hive_20260511182944_23484424-1edf-455c-ae92-bf4e7792a77d); Time taken: 0.033 seconds
+INFO  : Executing command(queryId=hive_20260511182944_23484424-1edf-455c-ae92-bf4e7792a77d): DROP TABLE IF EXISTS q1_results
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509232021_32c6b93b-3d50-486e-909e-a0f9f9ad0224); Time taken: 0.004 seconds
+INFO  : Completed executing command(queryId=hive_20260511182944_23484424-1edf-455c-ae92-bf4e7792a77d); Time taken: 0.004 seconds
 INFO  : OK
-No rows affected (0.065 seconds)
+No rows affected (0.059 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> CREATE EXTERNAL TABLE q1_results (
 . . . . . . . . . . . . . . . . . . . . . . .>     release_month INT,
@@ -56,7 +56,7 @@ No rows affected (0.065 seconds)
 . . . . . . . . . . . . . . . . . . . . . . .> FIELDS TERMINATED BY ','
 . . . . . . . . . . . . . . . . . . . . . . .> STORED AS TEXTFILE
 . . . . . . . . . . . . . . . . . . . . . . .> LOCATION 'project/hive/warehouse/q1_results';
-INFO  : Compiling command(queryId=hive_20260509232021_2a741f0f-e941-4652-8ca7-be74242959a8): CREATE EXTERNAL TABLE q1_results (
+INFO  : Compiling command(queryId=hive_20260511182944_62d73743-0d8a-47f1-89f9-6086a7b032e3): CREATE EXTERNAL TABLE q1_results (
 release_month INT,
 track_count BIGINT,
 avg_first_month_streams DOUBLE
@@ -67,7 +67,7 @@ STORED AS TEXTFILE
 LOCATION 'project/hive/warehouse/q1_results'
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:null, properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509232021_2a741f0f-e941-4652-8ca7-be74242959a8 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182944_62d73743-0d8a-47f1-89f9-6086a7b032e3 : STAGE DEPENDENCIES:
   Stage-0 is a root stage [DDL]
 
 STAGE PLANS:
@@ -84,8 +84,8 @@ STAGE PLANS:
           isExternal: true
 
 
-INFO  : Completed compiling command(queryId=hive_20260509232021_2a741f0f-e941-4652-8ca7-be74242959a8); Time taken: 0.034 seconds
-INFO  : Executing command(queryId=hive_20260509232021_2a741f0f-e941-4652-8ca7-be74242959a8): CREATE EXTERNAL TABLE q1_results (
+INFO  : Completed compiling command(queryId=hive_20260511182944_62d73743-0d8a-47f1-89f9-6086a7b032e3); Time taken: 0.032 seconds
+INFO  : Executing command(queryId=hive_20260511182944_62d73743-0d8a-47f1-89f9-6086a7b032e3): CREATE EXTERNAL TABLE q1_results (
 release_month INT,
 track_count BIGINT,
 avg_first_month_streams DOUBLE
@@ -95,9 +95,9 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 LOCATION 'project/hive/warehouse/q1_results'
 INFO  : Starting task [Stage-0:DDL] in serial mode
-INFO  : Completed executing command(queryId=hive_20260509232021_2a741f0f-e941-4652-8ca7-be74242959a8); Time taken: 0.027 seconds
+INFO  : Completed executing command(queryId=hive_20260511182944_62d73743-0d8a-47f1-89f9-6086a7b032e3); Time taken: 0.018 seconds
 INFO  : OK
-No rows affected (0.091 seconds)
+No rows affected (0.077 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> INSERT OVERWRITE TABLE q1_results
 . . . . . . . . . . . . . . . . . . . . . . .> SELECT
@@ -108,7 +108,7 @@ No rows affected (0.091 seconds)
 . . . . . . . . . . . . . . . . . . . . . . .> GROUP BY release_month
 . . . . . . . . . . . . . . . . . . . . . . .> ORDER BY release_month
 . . . . . . . . . . . . . . . . . . . . . . .> LIMIT 100;
-INFO  : Compiling command(queryId=hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073): INSERT OVERWRITE TABLE q1_results
+INFO  : Compiling command(queryId=hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1): INSERT OVERWRITE TABLE q1_results
 SELECT
 release_month,
 COUNT(*) AS track_count,
@@ -119,7 +119,7 @@ ORDER BY release_month
 LIMIT 100
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:release_month, type:int, comment:null), FieldSchema(name:track_count, type:bigint, comment:null), FieldSchema(name:avg_first_month_streams, type:double, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073 : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1 : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-2 depends on stages: Stage-1 [MAPRED]
   Stage-0 depends on stages: Stage-2 [MOVE]
@@ -191,8 +191,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 418525
-              transient_lastDdlTime 1778357806
+              totalSize 418785
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -215,7 +215,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -246,8 +246,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 605997
-              transient_lastDdlTime 1778357806
+              totalSize 605764
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -270,7 +270,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -301,8 +301,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 613918
-              transient_lastDdlTime 1778357806
+              totalSize 613745
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -325,7 +325,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -356,8 +356,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 423009
-              transient_lastDdlTime 1778357806
+              totalSize 422951
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -380,7 +380,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -411,8 +411,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 484633
-              transient_lastDdlTime 1778357806
+              totalSize 484787
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -435,7 +435,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -466,8 +466,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 545686
-              transient_lastDdlTime 1778357806
+              totalSize 545941
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -490,7 +490,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -521,8 +521,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 521313
-              transient_lastDdlTime 1778357806
+              totalSize 521488
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -545,7 +545,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -576,8 +576,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 567093
-              transient_lastDdlTime 1778357806
+              totalSize 567392
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -600,7 +600,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -631,8 +631,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 547845
-              transient_lastDdlTime 1778357806
+              totalSize 547501
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -655,7 +655,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -686,8 +686,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 480740
-              transient_lastDdlTime 1778357806
+              totalSize 481061
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -710,7 +710,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -741,8 +741,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 483288
-              transient_lastDdlTime 1778357806
+              totalSize 483278
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -765,7 +765,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -796,8 +796,8 @@ STAGE PLANS:
               serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
               serialization.format 1
               serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-              totalSize 545425
-              transient_lastDdlTime 1778357806
+              totalSize 545917
+              transient_lastDdlTime 1778513169
             serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
           
               input format: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -820,7 +820,7 @@ STAGE PLANS:
                 serialization.ddl struct songs_part_bucket { i64 id, double af_danceability, double af_energy, double key_sin, double key_cos, double af_loudness, i32 af_mode, double af_speechiness, double af_acousticness, double af_instrumentalness, double af_liveness, double af_valence, double af_tempo, double af_time_signature, double duration_ms, i32 explicit, i32 release_day_of_week, i32 release_week_of_year, i32 num_markets, i32 is_market_us, i32 is_market_gb, i32 is_market_de, i32 is_market_jp, i32 is_market_br, i32 is_market_fr, i32 is_market_ca, i32 is_market_au, i32 artist_prior_tracks_count, double artist_avg_past_streams, double streams_in_the_first_month}
                 serialization.format 1
                 serialization.lib org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-                transient_lastDdlTime 1778357794
+                transient_lastDdlTime 1778513133
               serde: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
               name: team23_projectdb.songs_part_bucket
             name: team23_projectdb.songs_part_bucket
@@ -850,7 +850,7 @@ STAGE PLANS:
             File Output Operator
               compressed: false
               GlobalTableId: 0
-              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002
+              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002
               NumFilesPerFileSink: 1
               table:
                   input format: org.apache.hadoop.mapred.SequenceFileInputFormat
@@ -880,9 +880,9 @@ STAGE PLANS:
               auto parallelism: false
       Execution mode: vectorized
       Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002]
       Path -> Partition:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002 
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002 
           Partition
             base file name: -mr-10002
             input format: org.apache.hadoop.mapred.SequenceFileInputFormat
@@ -905,7 +905,7 @@ STAGE PLANS:
                 serialization.lib org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
               serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
       Truncated Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10002]
       Needs Tagging: false
       Reduce Operator Tree:
         Select Operator
@@ -916,9 +916,9 @@ STAGE PLANS:
             File Output Operator
               compressed: false
               GlobalTableId: 1
-              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-ext-10000
+              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-ext-10000
               NumFilesPerFileSink: 1
-              Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-ext-10000/
+              Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-ext-10000/
               table:
                   input format: org.apache.hadoop.mapred.TextInputFormat
                   output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -938,7 +938,7 @@ STAGE PLANS:
                     serialization.ddl struct q1_results { i32 release_month, i64 track_count, double avg_first_month_streams}
                     serialization.format ,
                     serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
-                    transient_lastDdlTime 1778358021
+                    transient_lastDdlTime 1778513384
                   serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
                   name: team23_projectdb.q1_results
               TotalFiles: 1
@@ -954,7 +954,7 @@ STAGE PLANS:
                 File Output Operator
                   compressed: false
                   GlobalTableId: 0
-                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003
+                  directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003
                   NumFilesPerFileSink: 1
                   table:
                       input format: org.apache.hadoop.mapred.SequenceFileInputFormat
@@ -974,7 +974,7 @@ STAGE PLANS:
     Move Operator
       tables:
           replace: true
-          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-ext-10000
+          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-ext-10000
           table:
               input format: org.apache.hadoop.mapred.TextInputFormat
               output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -994,14 +994,14 @@ STAGE PLANS:
                 serialization.ddl struct q1_results { i32 release_month, i64 track_count, double avg_first_month_streams}
                 serialization.format ,
                 serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
-                transient_lastDdlTime 1778358021
+                transient_lastDdlTime 1778513384
               serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
               name: team23_projectdb.q1_results
 
   Stage: Stage-3
     Stats Work
       Basic Stats Work:
-          Stats Aggregation Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-ext-10000/
+          Stats Aggregation Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-ext-10000/
       Column Stats Desc:
           Columns: release_month, track_count, avg_first_month_streams
           Column Types: int, bigint, double
@@ -1021,9 +1021,9 @@ STAGE PLANS:
               auto parallelism: false
       Execution mode: vectorized
       Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003]
       Path -> Partition:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003 
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003 
           Partition
             base file name: -mr-10003
             input format: org.apache.hadoop.mapred.SequenceFileInputFormat
@@ -1046,7 +1046,7 @@ STAGE PLANS:
                 serialization.lib org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
               serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
       Truncated Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-mr-10003]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003 [hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-mr-10003]
       Needs Tagging: false
       Reduce Operator Tree:
         Group By Operator
@@ -1056,9 +1056,9 @@ STAGE PLANS:
           File Output Operator
             compressed: false
             GlobalTableId: 0
-            directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_549_8039163031887947341-1206/-mr-10000/.hive-staging_hive_2026-05-09_23-20-21_549_8039163031887947341-1206/-ext-10001
+            directory: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_272_311565665383605698-4344/-mr-10000/.hive-staging_hive_2026-05-11_18-29-45_272_311565665383605698-4344/-ext-10001
             NumFilesPerFileSink: 1
-            Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/04086e4f-f8f7-49c5-9a52-2d444ffe70a1/hive_2026-05-09_23-20-21_549_8039163031887947341-1206/-mr-10000/.hive-staging_hive_2026-05-09_23-20-21_549_8039163031887947341-1206/-ext-10001/
+            Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/tmp/hive/team23/741ba414-05c5-4fe5-b5e5-4ef948e2a9e4/hive_2026-05-11_18-29-45_272_311565665383605698-4344/-mr-10000/.hive-staging_hive_2026-05-11_18-29-45_272_311565665383605698-4344/-ext-10001/
             table:
                 input format: org.apache.hadoop.mapred.SequenceFileInputFormat
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
@@ -1076,8 +1076,8 @@ STAGE PLANS:
             MultiFileSpray: false
 
 
-INFO  : Completed compiling command(queryId=hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073); Time taken: 0.314 seconds
-INFO  : Executing command(queryId=hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073): INSERT OVERWRITE TABLE q1_results
+INFO  : Completed compiling command(queryId=hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1); Time taken: 0.304 seconds
+INFO  : Executing command(queryId=hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1): INSERT OVERWRITE TABLE q1_results
 SELECT
 release_month,
 COUNT(*) AS track_count,
@@ -1087,7 +1087,7 @@ GROUP BY release_month
 ORDER BY release_month
 LIMIT 100
 WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-INFO  : Query ID = hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073
+INFO  : Query ID = hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1
 INFO  : Total jobs = 3
 INFO  : Launching Job 1 out of 3
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
@@ -1099,17 +1099,17 @@ INFO  :   set hive.exec.reducers.max=<number>
 INFO  : In order to set a constant number of reducers:
 INFO  :   set mapreduce.job.reduces=<number>
 INFO  : number of splits:1
-INFO  : Submitting tokens for job: job_1777989965680_3119
+INFO  : Submitting tokens for job: job_1777989965680_8656
 INFO  : Executing with tokens: []
-INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3119/
-INFO  : Starting Job = job_1777989965680_3119, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3119/
-INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_3119
+INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8656/
+INFO  : Starting Job = job_1777989965680_8656, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8656/
+INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_8656
 INFO  : Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-INFO  : 2026-05-09 23:20:27,246 Stage-1 map = 0%,  reduce = 0%
-INFO  : 2026-05-09 23:20:36,413 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.83 sec
-INFO  : 2026-05-09 23:20:41,517 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 13.72 sec
-INFO  : MapReduce Total cumulative CPU time: 13 seconds 720 msec
-INFO  : Ended Job = job_1777989965680_3119
+INFO  : 2026-05-11 18:29:51,378 Stage-1 map = 0%,  reduce = 0%
+INFO  : 2026-05-11 18:29:59,532 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 10.43 sec
+INFO  : 2026-05-11 18:30:04,617 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 13.38 sec
+INFO  : MapReduce Total cumulative CPU time: 13 seconds 380 msec
+INFO  : Ended Job = job_1777989965680_8656
 INFO  : Launching Job 2 out of 3
 INFO  : Starting task [Stage-2:MAPRED] in serial mode
 INFO  : Number of reduce tasks determined at compile time: 1
@@ -1120,19 +1120,19 @@ INFO  :   set hive.exec.reducers.max=<number>
 INFO  : In order to set a constant number of reducers:
 INFO  :   set mapreduce.job.reduces=<number>
 INFO  : number of splits:1
-INFO  : Submitting tokens for job: job_1777989965680_3120
+INFO  : Submitting tokens for job: job_1777989965680_8657
 INFO  : Executing with tokens: []
-INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3120/
-INFO  : Starting Job = job_1777989965680_3120, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3120/
-INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_3120
+INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8657/
+INFO  : Starting Job = job_1777989965680_8657, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8657/
+INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_8657
 INFO  : Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-INFO  : 2026-05-09 23:20:48,111 Stage-2 map = 0%,  reduce = 0%
-INFO  : 2026-05-09 23:20:53,213 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.43 sec
-INFO  : 2026-05-09 23:20:59,323 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 3.91 sec
-INFO  : MapReduce Total cumulative CPU time: 3 seconds 910 msec
-INFO  : Ended Job = job_1777989965680_3120
+INFO  : 2026-05-11 18:30:11,221 Stage-2 map = 0%,  reduce = 0%
+INFO  : 2026-05-11 18:30:16,322 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+INFO  : 2026-05-11 18:30:21,408 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 3.83 sec
+INFO  : MapReduce Total cumulative CPU time: 3 seconds 830 msec
+INFO  : Ended Job = job_1777989965680_8657
 INFO  : Starting task [Stage-0:MOVE] in serial mode
-INFO  : Loading data to table team23_projectdb.q1_results from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-09_23-20-21_338_8253757112439274344-1206/-ext-10000
+INFO  : Loading data to table team23_projectdb.q1_results from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/hive/warehouse/q1_results/.hive-staging_hive_2026-05-11_18-29-45_059_8704885834707157192-4344/-ext-10000
 INFO  : Launching Job 3 out of 3
 INFO  : Starting task [Stage-4:MAPRED] in serial mode
 INFO  : Number of reduce tasks determined at compile time: 1
@@ -1143,38 +1143,38 @@ INFO  :   set hive.exec.reducers.max=<number>
 INFO  : In order to set a constant number of reducers:
 INFO  :   set mapreduce.job.reduces=<number>
 INFO  : number of splits:1
-INFO  : Submitting tokens for job: job_1777989965680_3121
+INFO  : Submitting tokens for job: job_1777989965680_8658
 INFO  : Executing with tokens: []
-INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3121/
-INFO  : Starting Job = job_1777989965680_3121, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3121/
-INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_3121
+INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8658/
+INFO  : Starting Job = job_1777989965680_8658, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8658/
+INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_8658
 INFO  : Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 1
-INFO  : 2026-05-09 23:21:06,061 Stage-4 map = 0%,  reduce = 0%
-INFO  : 2026-05-09 23:21:11,154 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
-INFO  : 2026-05-09 23:21:17,255 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 3.69 sec
-INFO  : MapReduce Total cumulative CPU time: 3 seconds 690 msec
-INFO  : Ended Job = job_1777989965680_3121
+INFO  : 2026-05-11 18:30:28,074 Stage-4 map = 0%,  reduce = 0%
+INFO  : 2026-05-11 18:30:32,178 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 1.54 sec
+INFO  : 2026-05-11 18:30:38,280 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 3.71 sec
+INFO  : MapReduce Total cumulative CPU time: 3 seconds 710 msec
+INFO  : Ended Job = job_1777989965680_8658
 INFO  : Starting task [Stage-3:STATS] in serial mode
 INFO  : MapReduce Jobs Launched: 
-INFO  : Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 13.72 sec   HDFS Read: 1974244 HDFS Write: 444 SUCCESS
-INFO  : Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 3.91 sec   HDFS Read: 11291 HDFS Write: 647 SUCCESS
-INFO  : Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 3.69 sec   HDFS Read: 11885 HDFS Write: 401 SUCCESS
-INFO  : Total MapReduce CPU Time Spent: 21 seconds 320 msec
-INFO  : Completed executing command(queryId=hive_20260509232021_fec6a59c-c143-4675-b74a-475bb2ac0073); Time taken: 56.712 seconds
+INFO  : Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 13.38 sec   HDFS Read: 1974466 HDFS Write: 444 SUCCESS
+INFO  : Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 3.83 sec   HDFS Read: 11291 HDFS Write: 647 SUCCESS
+INFO  : Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 3.71 sec   HDFS Read: 11878 HDFS Write: 401 SUCCESS
+INFO  : Total MapReduce CPU Time Spent: 20 seconds 920 msec
+INFO  : Completed executing command(queryId=hive_20260511182945_e7b83ab7-0975-4602-b4dd-913fa98477e1); Time taken: 54.022 seconds
 INFO  : OK
-No rows affected (57.043 seconds)
+No rows affected (54.347 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> 
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> INSERT OVERWRITE DIRECTORY 'project/output/q1_release_month'
 . . . . . . . . . . . . . . . . . . . . . . .> ROW FORMAT DELIMITED
 . . . . . . . . . . . . . . . . . . . . . . .> FIELDS TERMINATED BY ','
 . . . . . . . . . . . . . . . . . . . . . . .> SELECT * FROM q1_results;
-INFO  : Compiling command(queryId=hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc): INSERT OVERWRITE DIRECTORY 'project/output/q1_release_month'
+INFO  : Compiling command(queryId=hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e): INSERT OVERWRITE DIRECTORY 'project/output/q1_release_month'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT * FROM q1_results
 INFO  : Semantic Analysis Completed (retrial = false)
 INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:release_month, type:int, comment:null), FieldSchema(name:track_count, type:bigint, comment:null), FieldSchema(name:avg_first_month_streams, type:double, comment:null)], properties:null)
-INFO  : EXPLAIN output for queryid hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc : STAGE DEPENDENCIES:
+INFO  : EXPLAIN output for queryid hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e : STAGE DEPENDENCIES:
   Stage-1 is a root stage [MAPRED]
   Stage-6 depends on stages: Stage-1 , consists of Stage-3, Stage-2, Stage-4 [CONDITIONAL]
   Stage-3 [MOVE]
@@ -1196,9 +1196,9 @@ STAGE PLANS:
               File Output Operator
                 compressed: false
                 GlobalTableId: 1
-                directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002
+                directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002
                 NumFilesPerFileSink: 1
-                Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000/
+                Stats Publishing Key Prefix: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000/
                 table:
                     input format: org.apache.hadoop.mapred.TextInputFormat
                     output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -1242,7 +1242,7 @@ STAGE PLANS:
               serialization.format ,
               serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
               totalSize 219
-              transient_lastDdlTime 1778358078
+              transient_lastDdlTime 1778513439
             serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
           
               input format: org.apache.hadoop.mapred.TextInputFormat
@@ -1268,7 +1268,7 @@ STAGE PLANS:
                 serialization.format ,
                 serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
                 totalSize 219
-                transient_lastDdlTime 1778358078
+                transient_lastDdlTime 1778513439
               serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
               name: team23_projectdb.q1_results
             name: team23_projectdb.q1_results
@@ -1282,14 +1282,14 @@ STAGE PLANS:
     Move Operator
       files:
           hdfs directory: true
-          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002
-          destination: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002
+          destination: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
 
   Stage: Stage-0
     Move Operator
       files:
           hdfs directory: true
-          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
           destination: project/output/q1_release_month
 
   Stage: Stage-2
@@ -1300,7 +1300,7 @@ STAGE PLANS:
             File Output Operator
               compressed: false
               GlobalTableId: 0
-              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
               NumFilesPerFileSink: 1
               table:
                   input format: org.apache.hadoop.mapred.TextInputFormat
@@ -1316,9 +1316,9 @@ STAGE PLANS:
               GatherStats: false
               MultiFileSpray: false
       Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002]
       Path -> Partition:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 
           Partition
             base file name: -ext-10002
             input format: org.apache.hadoop.mapred.TextInputFormat
@@ -1341,7 +1341,7 @@ STAGE PLANS:
                 serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
               serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
       Truncated Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002]
 
   Stage: Stage-4
     Map Reduce
@@ -1351,7 +1351,7 @@ STAGE PLANS:
             File Output Operator
               compressed: false
               GlobalTableId: 0
-              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+              directory: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
               NumFilesPerFileSink: 1
               table:
                   input format: org.apache.hadoop.mapred.TextInputFormat
@@ -1367,9 +1367,9 @@ STAGE PLANS:
               GatherStats: false
               MultiFileSpray: false
       Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002]
       Path -> Partition:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 
           Partition
             base file name: -ext-10002
             input format: org.apache.hadoop.mapred.TextInputFormat
@@ -1392,50 +1392,50 @@ STAGE PLANS:
                 serialization.lib org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
               serde: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
       Truncated Path -> Alias:
-        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002]
+        hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002 [hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002]
 
   Stage: Stage-5
     Move Operator
       files:
           hdfs directory: true
-          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002
-          destination: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+          source: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002
+          destination: hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
 
 
-INFO  : Completed compiling command(queryId=hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc); Time taken: 0.214 seconds
-INFO  : Executing command(queryId=hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc): INSERT OVERWRITE DIRECTORY 'project/output/q1_release_month'
+INFO  : Completed compiling command(queryId=hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e); Time taken: 0.205 seconds
+INFO  : Executing command(queryId=hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e): INSERT OVERWRITE DIRECTORY 'project/output/q1_release_month'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT * FROM q1_results
 WARN  : Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-INFO  : Query ID = hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc
+INFO  : Query ID = hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e
 INFO  : Total jobs = 3
 INFO  : Launching Job 1 out of 3
 INFO  : Starting task [Stage-1:MAPRED] in serial mode
 INFO  : Number of reduce tasks is set to 0 since there's no reduce operator
 INFO  : number of splits:1
-INFO  : Submitting tokens for job: job_1777989965680_3123
+INFO  : Submitting tokens for job: job_1777989965680_8659
 INFO  : Executing with tokens: []
-INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3123/
-INFO  : Starting Job = job_1777989965680_3123, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_3123/
-INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_3123
+INFO  : The url to track the job: http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8659/
+INFO  : Starting Job = job_1777989965680_8659, Tracking URL = http://hadoop-03.uni.innopolis.ru:8088/proxy/application_1777989965680_8659/
+INFO  : Kill Command = /usr/lib/hadoop/bin/mapred job  -kill job_1777989965680_8659
 INFO  : Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-INFO  : 2026-05-09 23:21:24,240 Stage-1 map = 0%,  reduce = 0%
-INFO  : 2026-05-09 23:21:30,372 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.22 sec
-INFO  : MapReduce Total cumulative CPU time: 2 seconds 220 msec
-INFO  : Ended Job = job_1777989965680_3123
+INFO  : 2026-05-11 18:30:45,249 Stage-1 map = 0%,  reduce = 0%
+INFO  : 2026-05-11 18:30:50,337 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.05 sec
+INFO  : MapReduce Total cumulative CPU time: 2 seconds 50 msec
+INFO  : Ended Job = job_1777989965680_8659
 INFO  : Starting task [Stage-6:CONDITIONAL] in serial mode
 INFO  : Stage-3 is selected by condition resolver.
 INFO  : Stage-2 is filtered out by condition resolver.
 INFO  : Stage-4 is filtered out by condition resolver.
 INFO  : Starting task [Stage-3:MOVE] in serial mode
-INFO  : Moving data to directory hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000 from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10002
+INFO  : Moving data to directory hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000 from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10002
 INFO  : Starting task [Stage-0:MOVE] in serial mode
-INFO  : Moving data to directory project/output/q1_release_month from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-09_23-21-18_432_5729753900570922290-1206/-ext-10000
+INFO  : Moving data to directory project/output/q1_release_month from hdfs://hadoop-02.uni.innopolis.ru:8020/user/team23/project/output/q1_release_month/.hive-staging_hive_2026-05-11_18-30-39_453_7843298882661304179-4344/-ext-10000
 INFO  : MapReduce Jobs Launched: 
-INFO  : Stage-Stage-1: Map: 1   Cumulative CPU: 2.22 sec   HDFS Read: 5671 HDFS Write: 219 SUCCESS
-INFO  : Total MapReduce CPU Time Spent: 2 seconds 220 msec
-INFO  : Completed executing command(queryId=hive_20260509232118_2f43de64-5988-4822-bf91-4e392bfdb1bc); Time taken: 12.777 seconds
+INFO  : Stage-Stage-1: Map: 1   Cumulative CPU: 2.05 sec   HDFS Read: 5660 HDFS Write: 219 SUCCESS
+INFO  : Total MapReduce CPU Time Spent: 2 seconds 50 msec
+INFO  : Completed executing command(queryId=hive_20260511183039_d2e8da9d-500e-4626-b652-7c5eea6a674e); Time taken: 11.726 seconds
 INFO  : OK
-No rows affected (13.037 seconds)
+No rows affected (11.952 seconds)
 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10> Closing: 0: jdbc:hive2://hadoop-03.uni.innopolis.ru:10001
