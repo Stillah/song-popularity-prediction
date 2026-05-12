@@ -4,12 +4,12 @@
 
 * [Overview](#overview)
 * [Business Objective](#business-objective)
+* [Results](#results)
 * [Dataset](#dataset)
 * [Pipeline](#pipeline)
 * [Feature Engineering](#feature-engineering)
 * [EDA Insights](#eda-insights)
 * [Machine Learning](#machine-learning)
-* [Results](#results)
 * [Dashboard](#dashboard)
 * [Tech Stack](#tech-stack)
 * [Team](#team)
@@ -50,6 +50,25 @@ Identify which factors affect song popularity the most:
 * release timing
 * market availability
 * audio characteristics
+
+---
+
+# Results
+
+| Model             | RMSE   | MAE    | R²    |
+| ----------------- | ------ | ------ | ----- |
+| Baseline          | 2.38   | 1.92   | 0.00  |
+| Linear Regression | 2.17   | 1.75   | 0.17  |
+| GBT Regressor     | **1.95** | **1.45** | **0.37** |
+
+GBTRegressor achieved the best performance.
+
+The relatively modest R² is expected because many important factors are unavailable before release:
+
+* playlist placement
+* TikTok virality
+* social media trends
+* marketing campaigns
 
 ---
 
@@ -250,25 +269,6 @@ Main conclusion:
 artist history and distribution factors are more predictive than audio features alone.
 
 
-# Results
-
-| Model             | RMSE   | MAE    | R²    |
-| ----------------- | ------ | ------ | ----- |
-| Baseline          | 2.38   | 1.92   | 0.00  |
-| Linear Regression | 2.17   | 1.75   | 0.17  |
-| GBT Regressor     | **1.95** | **1.45** | **0.37** |
-
-GBTRegressor achieved the best performance.
-
-The relatively modest R² is expected because many important factors are unavailable before release:
-
-* playlist placement
-* TikTok virality
-* social media trends
-* marketing campaigns
-
----
-
 # Dashboard
 
 The Apache Superset dashboard includes:
@@ -317,12 +317,3 @@ Visualizations for:
 * Apache Superset
 
 ---
-
-# Team
-
-| Team Member          | Role             |
-| -------------------- | ---------------- |
-| Dziyana Melnikava    | Data Engineer    |
-| Rail Sabirov         | Data Scientist   |
-| Dzhamilia Fatkullina | ML Specialist    |
-| Ruslan Gatiatullin   | Technical Writer |

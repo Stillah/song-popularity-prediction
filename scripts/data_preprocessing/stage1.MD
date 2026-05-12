@@ -6,8 +6,8 @@
 This preprocessing pipeline transforms the raw Spotify Charts dataset into a clean, structured dataset ready for PostgreSQL storage and subsequent machine learning. The output dataset contains **30 columns**: 29 features and 1 target variable.
 
 **Scripts:**
-- `scripts/preprocess.sh` – Launches the PySpark job
-- `scripts/preprocess.py` – Performs all transformations using Spark
+- `scripts/data_preprocessing/preprocess.sh` – Launches the PySpark job
+- `scripts/data_preprocessing/preprocess.py` – Performs all transformations using Spark
 
 ---
 

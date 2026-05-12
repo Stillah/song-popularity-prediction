@@ -6,7 +6,7 @@ echo "Stage IV: Presentation dashboard preparation"
 mkdir -p output/stage4
 
 echo "[1/5] Preparing dashboard CSV files..."
-python3 scripts/prepare_stage4.py
+python3 scripts/visualizations/prepare_stage4.py
 
 echo "[2/5] Uploading Stage IV CSV files to HDFS..."
 hdfs dfs -rm -r -f project/stage4/ml_model_comparison
@@ -45,7 +45,7 @@ else
 fi
 
 echo "[4/5] Validating Stage IV outputs..."
-python3 scripts/validate_stage4.py 2>&1 | tee output/validate_stage4.txt
+python3 scripts/code_style/validate_stage4.py 2>&1 | tee output/validate_stage4.txt
 
 echo "[5/5] Running pylint for Stage IV scripts..."
-bash scripts/pylint_stage4.sh
+bash scripts/code_style/pylint_stage4.sh

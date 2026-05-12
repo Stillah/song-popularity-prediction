@@ -11,19 +11,19 @@ spark-submit \
     --executor-cores 2 \
     --executor-memory 4g \
     --driver-memory 2g \
-    "scripts/model.py" \
+    "scripts/modeling/model.py" \
     2>&1 | tee "output/model_output.txt"
 
 echo "      spark-submit finished."
 
 # Step 2 – Validate outputs
 echo "[2/4] Validating Stage 3 outputs..."
-python3 "scripts/validate_stage3.py" \
+python3 "scripts/code_style/validate_stage3.py" \
     2>&1 | tee "output/validate_stage3.txt"
 
 # Step 3 – Pylint check
 echo "[3/4] Running pylint on model.py and validate_stage3.py..."
-bash "scripts/pylint_stage3.sh"
+bash "scripts/code_style/pylint_stage3.sh"
 
 # Step 4 – Summary
 echo "[4/4] Stage 3 complete. Key output files:"

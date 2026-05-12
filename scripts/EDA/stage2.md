@@ -8,19 +8,19 @@ Our project dataset is based on Spotify charts and audio features. In Stage I, t
 
 ## Added files in Stage II
 
-### `scripts/hive_setup.sh`
+### `scripts/EDA/hive_setup.sh`
 This script prepares the Hive part of Stage II. It reads the Hive password, cleans old Stage II folders in HDFS, runs the main Hive DDL file, and saves the setup output to the `output/` folder. I use it to create the Hive database and the main analytical Hive tables.
 
-### `scripts/run_hive_query.sh`
+### `scripts/EDA/run_hive_query.sh`
 This script runs one EDA query file from the `sql/` folder using Beeline. It also exports the query result from HDFS into a local CSV file in `output/`. I use it to automate running each insight query and saving its result.
 
-### `scripts/validate_stage2.py`
+### `scripts/code_style/validate_stage2.py`
 This script checks whether the main Stage II output files were created successfully. It verifies that required files exist and are not empty, then writes the validation result into `output/validate_stage2.txt`. I use it as a simple final check after running Stage II.
 
-### `scripts/pylint_stage2.sh`
+### `scripts/code_style/pylint_stage2.sh`
 This script runs `pylint` for the Stage II validation script and saves the result into `output/pylint_stage2.txt`. I use it to show code quality checking for this stage.
 
-### `scripts/stage2.sh`
+### `scripts/EDA/stage2.sh`
 This is the main Stage II script. It runs the Hive setup, executes all EDA queries, validates outputs, and launches the pylint check. I use this file as the main entry point for testing Stage II.
 
 ---

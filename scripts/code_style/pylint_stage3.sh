@@ -7,15 +7,15 @@ OUTPUT_FILE="$REPO_ROOT/output/pylint_stage3.txt"
 echo "Running pylint on Stage 3 scripts..."
 
 {
-    echo "=== pylint: scripts/model.py ==="
-    pylint "$REPO_ROOT/scripts/model.py" \
+    echo "=== pylint: scripts/modeling/model.py ==="
+    pylint "$REPO_ROOT/scripts/modeling/model.py" \
         --disable=C0114,C0115,C0116,W0511,R0914,R0915 \
         --max-line-length=100 \
         || true
 
     echo ""
-    echo "=== pylint: scripts/validate_stage3.py ==="
-    pylint "$REPO_ROOT/scripts/validate_stage3.py" \
+    echo "=== pylint: scripts/code_style/validate_stage3.py ==="
+    pylint "$REPO_ROOT/scripts/code_style/validate_stage3.py" \
         --disable=C0114,C0115,C0116,W0511 \
         --max-line-length=100 \
         || true

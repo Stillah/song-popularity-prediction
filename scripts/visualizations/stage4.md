@@ -14,7 +14,7 @@ by Superset.
 
 ## Added files in Stage IV
 
-### `scripts/prepare_stage4.py`
+### `scripts/visualizations/prepare_stage4.py`
 
 This script reads the existing Stage II and Stage III output files and prepares
 clean dashboard datasets in `output/stage4/`.
@@ -46,17 +46,17 @@ Created tables:
 | `stage4_ml_feature_summary` | Feature extraction table |
 | `stage4_ml_feature_importance` | GBT feature importance chart |
 
-### `scripts/validate_stage4.py`
+### `scripts/code_style/validate_stage4.py`
 
 This script checks that all expected Stage IV output files exist, are not
 empty, and have the expected columns.
 
-### `scripts/pylint_stage4.sh`
+### `scripts/code_style/pylint_stage4.sh`
 
 This script runs pylint for the Stage IV Python scripts and saves the result to
 `output/pylint_stage4.txt`.
 
-### `scripts/stage4.sh`
+### `scripts/visualizations/stage4.sh`
 
 This is the main entry point for Stage IV. It prepares dashboard files, uploads
 them to HDFS, creates Hive external tables, validates the output, and runs

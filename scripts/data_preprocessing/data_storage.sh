@@ -6,6 +6,6 @@ echo "Data Storage"
 
 source venv/bin/activate
 
-python scripts/build_projectdb.py
+python scripts/data_preprocessing/build_projectdb.py
 
 echo "Table created and data loaded successfully!"

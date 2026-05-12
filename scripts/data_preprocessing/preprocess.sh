@@ -7,7 +7,7 @@ echo "Starting Data Downloading and Preprocessing"
 echo "Activating virtual environment..."
 source venv/bin/activate
 
-bash scripts/data_collection.sh
+bash scripts/data_preprocessing/data_collection.sh
 
 echo "Cleaning local data/clean_data/ directory..."
 rm -rf data/clean_data
@@ -40,7 +40,7 @@ spark-submit \
     --driver-memory 4g \
     --executor-memory 4g \
     --num-executors 4 \
-    scripts/preprocess.py
+    scripts/data_preprocessing/preprocess.py
     
 echo "Copying clean data from HDFS to local data/clean_data/..."
 hdfs dfs -get $HDFS_CLEAN_DIR/* data/clean_data/

@@ -15,28 +15,28 @@ Spark ML job, validates outputs, and checks code quality.
  
 ## Files Added in Stage 3
  
-### `scripts/model.py`
+### `scripts/modeling/model.py`
 The main Spark ML script submitted via `spark-submit`. It connects to Hive,
 reads the partitioned and bucketed table, applies feature engineering through
 a preprocessing pipeline of custom transformers, builds and tunes two models
 using cross-validated grid search, saves both models and their predictions to
 HDFS, then exports everything locally.
- 
-### `scripts/model.ipynb`
+
+### `scripts/modeling/model.ipynb`
 An interactive Jupyter notebook containing the same logic as `model.py`. Used
 during development to inspect intermediate DataFrames, verify schema, and
 examine metric outputs before automating with `spark-submit`.
- 
-### `scripts/stage3.sh`
+
+### `scripts/modeling/stage3.sh`
 The main entry point for Stage 3. Cleans stale local model folders, runs
 `model.py` via `spark-submit`, then calls the validation script and pylint
 check. Produces a full run log in `output/model_output.txt`.
- 
-### `scripts/validate_stage3.py`
+
+### `scripts/code_style/validate_stage3.py`
 Checks that all expected output files and directories exist and are non-empty.
 Writes a pass/fail report to `output/validate_stage3.txt`.
- 
-### `scripts/pylint_stage3.sh`
+
+### `scripts/code_style/pylint_stage3.sh`
 Runs `pylint` on `model.py` and `validate_stage3.py` and saves results to
 `output/pylint_stage3.txt`.
  
